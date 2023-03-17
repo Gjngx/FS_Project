@@ -1,0 +1,131 @@
+﻿.truyennoibat {
+    display: block;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+    .truyennoibat h2 {
+        text-align: center;
+    }
+
+.row1 {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0px, 1fr));
+    text-align: center;
+}
+
+.tnb {
+}
+
+    .tnb img {
+        width: 90%;
+        border-radius: 4px;
+    }
+
+.main {
+    display: grid;
+    grid-template-columns: [truỵenmoi] 69% [line] 1% [bangxephang] 30%;
+}
+
+.truyenmoi {
+    display: block;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+    .truyenmoi h2 {
+        text-align: center;
+    }
+
+.row2 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
+    text-align: center;
+}
+
+.tm {
+}
+
+    .tm img {
+        width: 90%;
+        border-radius: 4px;
+    }
+
+.pagination {
+    display: inline-block;
+    padding: 10px;
+}
+
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        border: 1px solid #ddd;
+    }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        .pagination a:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .pagination a:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
+.theloai {
+    background-color: white;
+    border-radius: 4px;
+}
+
+.tieude {
+    height: 40px;
+    text-transform: uppercase;
+}
+
+    .tieude h2 {
+        font-size: 20px;
+        height: 40px;
+        line-height: 40px;
+        max-width: 100%;
+    }
+
+.row-theloai {
+    display: table-row;
+    font-size: 16px;
+}
+
+.col-theloai {
+    height: 30px !important;
+    line-height: 35px !important;
+    border: 0 !important;
+    padding-left: 20px !important;
+    max-width: 270px;
+    padding: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 50%;
+    float: left;
+    min-height: 1px;
+    box-sizing: border-box;
+}
+
+    .col-theloai a {
+        color: #4e4e4e;
+        text-decoration: none;
+    }
