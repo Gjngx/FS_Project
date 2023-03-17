@@ -1,0 +1,517 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="FSData_ProjectModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Admins">
+          <Key>
+            <PropertyRef Name="id_Admin" />
+          </Key>
+          <Property Name="id_Admin" Type="int" Nullable="false" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="PassWords" Type="varchar" MaxLength="50" />
+          <Property Name="TrangThai" Type="bit" />
+        </EntityType>
+        <EntityType Name="ChuongTruyen">
+          <Key>
+            <PropertyRef Name="id_Chuong" />
+          </Key>
+          <Property Name="id_Chuong" Type="int" Nullable="false" />
+          <Property Name="TenChuong" Type="nvarchar" MaxLength="255" />
+          <Property Name="tieuDe" Type="varchar" MaxLength="150" />
+          <Property Name="NoiDungChu" Type="ntext" />
+          <Property Name="NoiDungAudio" Type="varchar" MaxLength="250" />
+          <Property Name="id_Truyen" Type="int" />
+        </EntityType>
+        <EntityType Name="TacGia">
+          <Key>
+            <PropertyRef Name="id_TacGia" />
+          </Key>
+          <Property Name="id_TacGia" Type="int" Nullable="false" />
+          <Property Name="TenTacGia" Type="nvarchar" MaxLength="150" />
+          <Property Name="TieuDe" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="TheLoai">
+          <Key>
+            <PropertyRef Name="id_TheLoai" />
+          </Key>
+          <Property Name="id_TheLoai" Type="int" Nullable="false" />
+          <Property Name="TenTheLoai" Type="nvarchar" MaxLength="150" />
+          <Property Name="TieuDe" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="TheoDoi">
+          <Key>
+            <PropertyRef Name="id_TheoDoi" />
+          </Key>
+          <Property Name="id_TheoDoi" Type="int" Nullable="false" />
+          <Property Name="id_Truyen" Type="int" />
+          <Property Name="id_User" Type="int" />
+        </EntityType>
+        <EntityType Name="TrangThai">
+          <Key>
+            <PropertyRef Name="id_TrangThai" />
+          </Key>
+          <Property Name="id_TrangThai" Type="int" Nullable="false" />
+          <Property Name="TrangThai" Type="varchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="Truyen">
+          <Key>
+            <PropertyRef Name="id_Truyen" />
+          </Key>
+          <Property Name="id_Truyen" Type="int" Nullable="false" />
+          <Property Name="id_TacGia" Type="int" />
+          <Property Name="id_TheLoai" Type="int" />
+          <Property Name="id_TrangThai" Type="int" />
+          <Property Name="TenTruyen" Type="nvarchar" MaxLength="255" />
+          <Property Name="TieuDe" Type="varchar" MaxLength="150" />
+          <Property Name="AnhTruyen" Type="nvarchar" MaxLength="255" />
+          <Property Name="GioiThieu" Type="ntext" />
+          <Property Name="LuotXem" Type="int" />
+          <Property Name="NgayDang" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Users">
+          <Key>
+            <PropertyRef Name="id_User" />
+          </Key>
+          <Property Name="id_User" Type="int" Nullable="false" />
+          <Property Name="HoTen" Type="nvarchar" MaxLength="150" />
+          <Property Name="GioiTinh" Type="nvarchar" MaxLength="50" />
+          <Property Name="NgaySinh" Type="date" />
+          <Property Name="SDT" Type="nvarchar" MaxLength="13" />
+          <Property Name="Email" Type="nvarchar" MaxLength="250" />
+          <Property Name="UserName" Type="varchar" MaxLength="50" />
+          <Property Name="PassWords" Type="varchar" MaxLength="50" />
+          <Property Name="TrangThai" Type="bit" />
+          <Property Name="VIP" Type="smallint" />
+        </EntityType>
+        <Association Name="FK__ChuongTru__id_Tr__45F365D3">
+          <End Role="Truyen" Type="Self.Truyen" Multiplicity="0..1" />
+          <End Role="ChuongTruyen" Type="Self.ChuongTruyen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Truyen">
+              <PropertyRef Name="id_Truyen" />
+            </Principal>
+            <Dependent Role="ChuongTruyen">
+              <PropertyRef Name="id_Truyen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TheoDoi__id_Truy__48CFD27E">
+          <End Role="Truyen" Type="Self.Truyen" Multiplicity="0..1" />
+          <End Role="TheoDoi" Type="Self.TheoDoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Truyen">
+              <PropertyRef Name="id_Truyen" />
+            </Principal>
+            <Dependent Role="TheoDoi">
+              <PropertyRef Name="id_Truyen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TheoDoi__id_User__49C3F6B7">
+          <End Role="Users" Type="Self.Users" Multiplicity="0..1" />
+          <End Role="TheoDoi" Type="Self.TheoDoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="id_User" />
+            </Principal>
+            <Dependent Role="TheoDoi">
+              <PropertyRef Name="id_User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Truyen__id_TacGi__412EB0B6">
+          <End Role="TacGia" Type="Self.TacGia" Multiplicity="0..1" />
+          <End Role="Truyen" Type="Self.Truyen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TacGia">
+              <PropertyRef Name="id_TacGia" />
+            </Principal>
+            <Dependent Role="Truyen">
+              <PropertyRef Name="id_TacGia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Truyen__id_TheLo__4222D4EF">
+          <End Role="TheLoai" Type="Self.TheLoai" Multiplicity="0..1" />
+          <End Role="Truyen" Type="Self.Truyen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TheLoai">
+              <PropertyRef Name="id_TheLoai" />
+            </Principal>
+            <Dependent Role="Truyen">
+              <PropertyRef Name="id_TheLoai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Truyen__id_Trang__4316F928">
+          <End Role="TrangThai" Type="Self.TrangThai" Multiplicity="0..1" />
+          <End Role="Truyen" Type="Self.Truyen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TrangThai">
+              <PropertyRef Name="id_TrangThai" />
+            </Principal>
+            <Dependent Role="Truyen">
+              <PropertyRef Name="id_TrangThai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FSData_ProjectModelStoreContainer">
+          <EntitySet Name="Admins" EntityType="Self.Admins" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChuongTruyen" EntityType="Self.ChuongTruyen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TacGia" EntityType="Self.TacGia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TheLoai" EntityType="Self.TheLoai" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TheoDoi" EntityType="Self.TheoDoi" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TrangThai" EntityType="Self.TrangThai" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Truyen" EntityType="Self.Truyen" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Users" EntityType="Self.Users" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__ChuongTru__id_Tr__45F365D3" Association="Self.FK__ChuongTru__id_Tr__45F365D3">
+            <End Role="Truyen" EntitySet="Truyen" />
+            <End Role="ChuongTruyen" EntitySet="ChuongTruyen" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TheoDoi__id_Truy__48CFD27E" Association="Self.FK__TheoDoi__id_Truy__48CFD27E">
+            <End Role="Truyen" EntitySet="Truyen" />
+            <End Role="TheoDoi" EntitySet="TheoDoi" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TheoDoi__id_User__49C3F6B7" Association="Self.FK__TheoDoi__id_User__49C3F6B7">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="TheoDoi" EntitySet="TheoDoi" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Truyen__id_TacGi__412EB0B6" Association="Self.FK__Truyen__id_TacGi__412EB0B6">
+            <End Role="TacGia" EntitySet="TacGia" />
+            <End Role="Truyen" EntitySet="Truyen" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Truyen__id_TheLo__4222D4EF" Association="Self.FK__Truyen__id_TheLo__4222D4EF">
+            <End Role="TheLoai" EntitySet="TheLoai" />
+            <End Role="Truyen" EntitySet="Truyen" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Truyen__id_Trang__4316F928" Association="Self.FK__Truyen__id_Trang__4316F928">
+            <End Role="TrangThai" EntitySet="TrangThai" />
+            <End Role="Truyen" EntitySet="Truyen" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="FSData_ProjectModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Admin">
+          <Key>
+            <PropertyRef Name="id_Admin" />
+          </Key>
+          <Property Name="id_Admin" Type="Int32" Nullable="false" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PassWords" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TrangThai" Type="Boolean" />
+        </EntityType>
+        <EntityType Name="ChuongTruyen">
+          <Key>
+            <PropertyRef Name="id_Chuong" />
+          </Key>
+          <Property Name="id_Chuong" Type="Int32" Nullable="false" />
+          <Property Name="TenChuong" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="tieuDe" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="NoiDungChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="NoiDungAudio" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="id_Truyen" Type="Int32" />
+          <NavigationProperty Name="Truyen" Relationship="Self.FK__ChuongTru__id_Tr__45F365D3" FromRole="ChuongTruyen" ToRole="Truyen" />
+        </EntityType>
+        <EntityType Name="TacGia">
+          <Key>
+            <PropertyRef Name="id_TacGia" />
+          </Key>
+          <Property Name="id_TacGia" Type="Int32" Nullable="false" />
+          <Property Name="TenTacGia" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="TieuDe" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Truyens" Relationship="Self.FK__Truyen__id_TacGi__412EB0B6" FromRole="TacGia" ToRole="Truyen" />
+        </EntityType>
+        <EntityType Name="TheLoai">
+          <Key>
+            <PropertyRef Name="id_TheLoai" />
+          </Key>
+          <Property Name="id_TheLoai" Type="Int32" Nullable="false" />
+          <Property Name="TenTheLoai" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="TieuDe" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Truyens" Relationship="Self.FK__Truyen__id_TheLo__4222D4EF" FromRole="TheLoai" ToRole="Truyen" />
+        </EntityType>
+        <EntityType Name="TheoDoi">
+          <Key>
+            <PropertyRef Name="id_TheoDoi" />
+          </Key>
+          <Property Name="id_TheoDoi" Type="Int32" Nullable="false" />
+          <Property Name="id_Truyen" Type="Int32" />
+          <Property Name="id_User" Type="Int32" />
+          <NavigationProperty Name="Truyen" Relationship="Self.FK__TheoDoi__id_Truy__48CFD27E" FromRole="TheoDoi" ToRole="Truyen" />
+          <NavigationProperty Name="User" Relationship="Self.FK__TheoDoi__id_User__49C3F6B7" FromRole="TheoDoi" ToRole="Users" />
+        </EntityType>
+        <EntityType Name="TrangThai">
+          <Key>
+            <PropertyRef Name="id_TrangThai" />
+          </Key>
+          <Property Name="id_TrangThai" Type="Int32" Nullable="false" />
+          <Property Name="TrangThai1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Truyens" Relationship="Self.FK__Truyen__id_Trang__4316F928" FromRole="TrangThai" ToRole="Truyen" />
+        </EntityType>
+        <EntityType Name="Truyen">
+          <Key>
+            <PropertyRef Name="id_Truyen" />
+          </Key>
+          <Property Name="id_Truyen" Type="Int32" Nullable="false" />
+          <Property Name="id_TacGia" Type="Int32" />
+          <Property Name="id_TheLoai" Type="Int32" />
+          <Property Name="id_TrangThai" Type="Int32" />
+          <Property Name="TenTruyen" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="TieuDe" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="AnhTruyen" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+          <Property Name="GioiThieu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="LuotXem" Type="Int32" />
+          <Property Name="NgayDang" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="ChuongTruyens" Relationship="Self.FK__ChuongTru__id_Tr__45F365D3" FromRole="Truyen" ToRole="ChuongTruyen" />
+          <NavigationProperty Name="TacGia" Relationship="Self.FK__Truyen__id_TacGi__412EB0B6" FromRole="Truyen" ToRole="TacGia" />
+          <NavigationProperty Name="TheLoai" Relationship="Self.FK__Truyen__id_TheLo__4222D4EF" FromRole="Truyen" ToRole="TheLoai" />
+          <NavigationProperty Name="TheoDois" Relationship="Self.FK__TheoDoi__id_Truy__48CFD27E" FromRole="Truyen" ToRole="TheoDoi" />
+          <NavigationProperty Name="TrangThai" Relationship="Self.FK__Truyen__id_Trang__4316F928" FromRole="Truyen" ToRole="TrangThai" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id_User" />
+          </Key>
+          <Property Name="id_User" Type="Int32" Nullable="false" />
+          <Property Name="HoTen" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="NgaySinh" Type="DateTime" Precision="0" />
+          <Property Name="SDT" Type="String" MaxLength="13" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+          <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PassWords" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="TrangThai" Type="Boolean" />
+          <Property Name="VIP" Type="Int16" />
+          <NavigationProperty Name="TheoDois" Relationship="Self.FK__TheoDoi__id_User__49C3F6B7" FromRole="Users" ToRole="TheoDoi" />
+        </EntityType>
+        <Association Name="FK__ChuongTru__id_Tr__45F365D3">
+          <End Role="Truyen" Type="Self.Truyen" Multiplicity="0..1" />
+          <End Role="ChuongTruyen" Type="Self.ChuongTruyen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Truyen">
+              <PropertyRef Name="id_Truyen" />
+            </Principal>
+            <Dependent Role="ChuongTruyen">
+              <PropertyRef Name="id_Truyen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Truyen__id_TacGi__412EB0B6">
+          <End Role="TacGia" Type="Self.TacGia" Multiplicity="0..1" />
+          <End Role="Truyen" Type="Self.Truyen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TacGia">
+              <PropertyRef Name="id_TacGia" />
+            </Principal>
+            <Dependent Role="Truyen">
+              <PropertyRef Name="id_TacGia" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Truyen__id_TheLo__4222D4EF">
+          <End Role="TheLoai" Type="Self.TheLoai" Multiplicity="0..1" />
+          <End Role="Truyen" Type="Self.Truyen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TheLoai">
+              <PropertyRef Name="id_TheLoai" />
+            </Principal>
+            <Dependent Role="Truyen">
+              <PropertyRef Name="id_TheLoai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TheoDoi__id_Truy__48CFD27E">
+          <End Role="Truyen" Type="Self.Truyen" Multiplicity="0..1" />
+          <End Role="TheoDoi" Type="Self.TheoDoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Truyen">
+              <PropertyRef Name="id_Truyen" />
+            </Principal>
+            <Dependent Role="TheoDoi">
+              <PropertyRef Name="id_Truyen" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__TheoDoi__id_User__49C3F6B7">
+          <End Role="Users" Type="Self.User" Multiplicity="0..1" />
+          <End Role="TheoDoi" Type="Self.TheoDoi" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Users">
+              <PropertyRef Name="id_User" />
+            </Principal>
+            <Dependent Role="TheoDoi">
+              <PropertyRef Name="id_User" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Truyen__id_Trang__4316F928">
+          <End Role="TrangThai" Type="Self.TrangThai" Multiplicity="0..1" />
+          <End Role="Truyen" Type="Self.Truyen" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="TrangThai">
+              <PropertyRef Name="id_TrangThai" />
+            </Principal>
+            <Dependent Role="Truyen">
+              <PropertyRef Name="id_TrangThai" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="FSData_ProjectEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Admins" EntityType="Self.Admin" />
+          <EntitySet Name="ChuongTruyens" EntityType="Self.ChuongTruyen" />
+          <EntitySet Name="TacGias" EntityType="Self.TacGia" />
+          <EntitySet Name="TheLoais" EntityType="Self.TheLoai" />
+          <EntitySet Name="TheoDois" EntityType="Self.TheoDoi" />
+          <EntitySet Name="TrangThais" EntityType="Self.TrangThai" />
+          <EntitySet Name="Truyens" EntityType="Self.Truyen" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <AssociationSet Name="FK__ChuongTru__id_Tr__45F365D3" Association="Self.FK__ChuongTru__id_Tr__45F365D3">
+            <End Role="Truyen" EntitySet="Truyens" />
+            <End Role="ChuongTruyen" EntitySet="ChuongTruyens" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Truyen__id_TacGi__412EB0B6" Association="Self.FK__Truyen__id_TacGi__412EB0B6">
+            <End Role="TacGia" EntitySet="TacGias" />
+            <End Role="Truyen" EntitySet="Truyens" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Truyen__id_TheLo__4222D4EF" Association="Self.FK__Truyen__id_TheLo__4222D4EF">
+            <End Role="TheLoai" EntitySet="TheLoais" />
+            <End Role="Truyen" EntitySet="Truyens" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TheoDoi__id_Truy__48CFD27E" Association="Self.FK__TheoDoi__id_Truy__48CFD27E">
+            <End Role="Truyen" EntitySet="Truyens" />
+            <End Role="TheoDoi" EntitySet="TheoDois" />
+          </AssociationSet>
+          <AssociationSet Name="FK__TheoDoi__id_User__49C3F6B7" Association="Self.FK__TheoDoi__id_User__49C3F6B7">
+            <End Role="Users" EntitySet="Users" />
+            <End Role="TheoDoi" EntitySet="TheoDois" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Truyen__id_Trang__4316F928" Association="Self.FK__Truyen__id_Trang__4316F928">
+            <End Role="TrangThai" EntitySet="TrangThais" />
+            <End Role="Truyen" EntitySet="Truyens" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="FSData_ProjectModelStoreContainer" CdmEntityContainer="FSData_ProjectEntities">
+          <EntitySetMapping Name="Admins">
+            <EntityTypeMapping TypeName="FSData_ProjectModel.Admin">
+              <MappingFragment StoreEntitySet="Admins">
+                <ScalarProperty Name="id_Admin" ColumnName="id_Admin" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="PassWords" ColumnName="PassWords" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChuongTruyens">
+            <EntityTypeMapping TypeName="FSData_ProjectModel.ChuongTruyen">
+              <MappingFragment StoreEntitySet="ChuongTruyen">
+                <ScalarProperty Name="id_Chuong" ColumnName="id_Chuong" />
+                <ScalarProperty Name="TenChuong" ColumnName="TenChuong" />
+                <ScalarProperty Name="tieuDe" ColumnName="tieuDe" />
+                <ScalarProperty Name="NoiDungChu" ColumnName="NoiDungChu" />
+                <ScalarProperty Name="NoiDungAudio" ColumnName="NoiDungAudio" />
+                <ScalarProperty Name="id_Truyen" ColumnName="id_Truyen" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TacGias">
+            <EntityTypeMapping TypeName="FSData_ProjectModel.TacGia">
+              <MappingFragment StoreEntitySet="TacGia">
+                <ScalarProperty Name="id_TacGia" ColumnName="id_TacGia" />
+                <ScalarProperty Name="TenTacGia" ColumnName="TenTacGia" />
+                <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TheLoais">
+            <EntityTypeMapping TypeName="FSData_ProjectModel.TheLoai">
+              <MappingFragment StoreEntitySet="TheLoai">
+                <ScalarProperty Name="id_TheLoai" ColumnName="id_TheLoai" />
+                <ScalarProperty Name="TenTheLoai" ColumnName="TenTheLoai" />
+                <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TheoDois">
+            <EntityTypeMapping TypeName="FSData_ProjectModel.TheoDoi">
+              <MappingFragment StoreEntitySet="TheoDoi">
+                <ScalarProperty Name="id_TheoDoi" ColumnName="id_TheoDoi" />
+                <ScalarProperty Name="id_Truyen" ColumnName="id_Truyen" />
+                <ScalarProperty Name="id_User" ColumnName="id_User" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TrangThais">
+            <EntityTypeMapping TypeName="FSData_ProjectModel.TrangThai">
+              <MappingFragment StoreEntitySet="TrangThai">
+                <ScalarProperty Name="id_TrangThai" ColumnName="id_TrangThai" />
+                <ScalarProperty Name="TrangThai1" ColumnName="TrangThai" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Truyens">
+            <EntityTypeMapping TypeName="FSData_ProjectModel.Truyen">
+              <MappingFragment StoreEntitySet="Truyen">
+                <ScalarProperty Name="id_Truyen" ColumnName="id_Truyen" />
+                <ScalarProperty Name="id_TacGia" ColumnName="id_TacGia" />
+                <ScalarProperty Name="id_TheLoai" ColumnName="id_TheLoai" />
+                <ScalarProperty Name="id_TrangThai" ColumnName="id_TrangThai" />
+                <ScalarProperty Name="TenTruyen" ColumnName="TenTruyen" />
+                <ScalarProperty Name="TieuDe" ColumnName="TieuDe" />
+                <ScalarProperty Name="AnhTruyen" ColumnName="AnhTruyen" />
+                <ScalarProperty Name="GioiThieu" ColumnName="GioiThieu" />
+                <ScalarProperty Name="LuotXem" ColumnName="LuotXem" />
+                <ScalarProperty Name="NgayDang" ColumnName="NgayDang" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="FSData_ProjectModel.User">
+              <MappingFragment StoreEntitySet="Users">
+                <ScalarProperty Name="id_User" ColumnName="id_User" />
+                <ScalarProperty Name="HoTen" ColumnName="HoTen" />
+                <ScalarProperty Name="GioiTinh" ColumnName="GioiTinh" />
+                <ScalarProperty Name="NgaySinh" ColumnName="NgaySinh" />
+                <ScalarProperty Name="SDT" ColumnName="SDT" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="UserName" ColumnName="UserName" />
+                <ScalarProperty Name="PassWords" ColumnName="PassWords" />
+                <ScalarProperty Name="TrangThai" ColumnName="TrangThai" />
+                <ScalarProperty Name="VIP" ColumnName="VIP" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

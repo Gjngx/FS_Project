@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/Content/Site.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500&display=swap" rel="stylesheet">
+</head>
+<header>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">
+                <img src="~/images/logo.png">
+            </div>
+            <div style="margin-left: auto;"></div>
+            <div class="search">
+                <img src="~/images/search.png">
+            </div>
+            <div class="account">
+                <img src="~/images/user.png">
+            </div>
+            <div class="menu">
+                <img src="~/images/list.png">
+            </div>
+        </nav>
+    </div>
+</header>
+<body style="background-color: #ebebeb;">
+    @RenderBody()
+</body>
+<footer>
+    <div class="footer">
+        <div class="b1">
+            <h2 style="font-size: 30px;">Người thực hiện</h2>
+            <p>Đặng Nhật Giang <br> Nguyễn Xuân Phát <br> Đỗ Thanh Phương <br> Lê Mạnh Tuấn</p>
+        </div>
+        <div class="b2">
+            <div class="logofooter">
+                <img src="~/images/logo.png">
+            </div>
+            <p>Đây là dự án web đầu tay của nhóm <br> nên còn nhiều sai sót xin mọi người thông cảm</p>
+            <p>Copyright &copy; 2023 Funny Story</p>
+        </div>
+        <div class="b3">
+            <h2 style="font-size: 30px;">Thông tin liên hệ</h2>
+            <a href="https://www.facebook.com/Giang.Dang.2k2" target="_blank" style="text-decoration: none;"><span style="color: white; font-size: 20px;">Facebook</span></a><br>
+            <a href="https://www.instagram.com/giang.dang.2k2/" target="_blank" style="text-decoration: none;"><span style="color: white; font-size: 20px;">Instagram</span></a><br>
+        </div>
+    </div>
+</footer>
+</html>

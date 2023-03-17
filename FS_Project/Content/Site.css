@@ -1,0 +1,98 @@
+﻿* {
+    font-family: 'Nunito', sans-serif;
+}
+
+.container {
+    position: fixed;
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+
+.navbar {
+    display: flex;
+    height: 100%;
+    background: white;
+}
+
+    .navbar .logo {
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+        .navbar .logo img {
+            width: 180px;
+        }
+
+    .navbar .search {
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+        .navbar .search img {
+            width: 25px;
+        }
+
+    .navbar .account {
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+        .navbar .account img {
+            width: 25px;
+        }
+
+    .navbar .menu {
+        display: flex;
+        -webkit-box-pack: center;
+        justify-content: center;
+        flex-direction: column;
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+
+        .navbar .menu img {
+            width: 25px;
+        }
+
+.footer {
+    color: white;
+    background-color: rgb(40, 34, 34);
+    padding: 10px;
+    margin: 0px -7.7888888px -7.8888px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0px, 1fr));
+}
+
+.b1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.b2 {
+    text-align: center;
+}
+
+    .b2 img {
+        width: 400px;
+        padding-right: 20px;
+    }
+
+.b3 {
+    text-align: center;
+}
