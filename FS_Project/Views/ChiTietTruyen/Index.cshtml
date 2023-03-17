@@ -17,8 +17,8 @@
                 <div class="khungchitiet">
                     <div class="truyen">
                         <div class="anhtruyen">
-                            <img src="~/images/imgTruyen/@Model.anhtruyen"
-                                 alt="@Model.tentruyen" itemprop="image" />
+                            <img style="border-radius: 5px;" src="~/images/imgTruyen/@Model.anhtruyen"
+                                 alt="@Model.tentruyen" itemprop="image"/>
                         </div>
                     </div>
                     <div class="info">
@@ -30,28 +30,14 @@
                         <div>
                             <h3>Thể loại:</h3>
                             <a itemprop="genre" href="#" title="@Model.tentheloai">@Model.tentheloai</a>,
-                            <a itemprop="genre" href="#" title="Khoa Huyễn">
-                                Khoa
-                                Huyễn
-                            </a>
                         </div>
                         <div>
                             <h3>Trạng thái:</h3>
-                            <span class="text-success">Full</span>
+                            <span class="text-success">@Model.trangthai</span>
                         </div>
                     </div>
                 </div>
                 <div class="tomtat">
-                    <div class="rate">
-                        <div class="danhgia">
-                            <em>
-                                Đánh giá:
-                                <strong><span>5.5</span></strong>
-                                /<span>10</span>
-                                từ <strong><span>1652</span> lượt</strong>
-                            </em>
-                        </div>
-                    </div>
                     <section class="cottruyen">
                         <p style="text-align: justify; ">@Model.tomtat</p>
                         <p style="text-align: justify; "><br></p>

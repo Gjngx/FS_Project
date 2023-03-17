@@ -19,6 +19,7 @@ namespace FS_Project.Context
         public string tieuDe { get; set; }
         public string NoiDungChu { get; set; }
         public string NoiDungAudio { get; set; }
+        public Nullable<int> SoChuong { get; set; }
         public Nullable<int> id_Truyen { get; set; }
     
         public virtual Truyen Truyen { get; set; }

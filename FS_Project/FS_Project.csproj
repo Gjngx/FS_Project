@@ -186,8 +186,8 @@
     <Content Include="Content\StyleFS-ChiTietTruyen.css" />
     <Content Include="Context\DbModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DbModel.Context.cs</LastGenOutput>
       <DependentUpon>DbModel.edmx</DependentUpon>
+      <LastGenOutput>DbModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Context\DbModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -198,11 +198,30 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="images\imgTruyen\cochannhan.jpg" />
-    <Content Include="images\imgTruyen\digioivodichhethong.jpg" />
-    <Content Include="images\imgTruyen\hondevuthan.jpg" />
-    <Content Include="images\imgTruyen\thonthanchiton.jpg" />
-    <Content Include="images\imgTruyen\trongsinhchitoicuong.jpg" />
+    <Content Include="images\imgTruyen\ban-tien.jpg" />
+    <Content Include="images\imgTruyen\co-chan-nhan.jpg" />
+    <Content Include="images\imgTruyen\dao-mo-but-ky.jpg" />
+    <Content Include="images\imgTruyen\de-yen.jpg" />
+    <Content Include="images\imgTruyen\di-gioi-vo-dich-he-thong.jpg" />
+    <Content Include="images\imgTruyen\do-thi-than-nhan.jpg" />
+    <Content Include="images\imgTruyen\giang-son-my-sac.jpg" />
+    <Content Include="images\imgTruyen\hoa-son-tien-mon.jpg" />
+    <Content Include="images\imgTruyen\hon-de-vu-than.jpg" />
+    <Content Include="images\imgTruyen\huyet-vuc-me-do.jpg" />
+    <Content Include="images\imgTruyen\khap-chon-giang-ho-deu-la-tho-hao.jpg" />
+    <Content Include="images\imgTruyen\kieu-the-nhu-van.jpg" />
+    <Content Include="images\imgTruyen\le-hap-duong-phen.jpg" />
+    <Content Include="images\imgTruyen\luat-ngam.jpg" />
+    <Content Include="images\imgTruyen\lui-ra-de-tram-den.jpg" />
+    <Content Include="images\imgTruyen\mong-hong-tran.jpg" />
+    <Content Include="images\imgTruyen\nghich-thien-ta-than.jpg" />
+    <Content Include="images\imgTruyen\nguyen-long.jpg" />
+    <Content Include="images\imgTruyen\nhat-kiem-suong-han.jpg" />
+    <Content Include="images\imgTruyen\thien-ha-vo-song.jpg" />
+    <Content Include="images\imgTruyen\thon-than-chi-ton.jpg" />
+    <Content Include="images\imgTruyen\trong-sinh-chi-toi-cuong-kiem-than.jpg" />
+    <Content Include="images\imgTruyen\truong-cap-ba-son-hai.jpg" />
+    <Content Include="images\imgTruyen\truy-tim-ky-uc.jpg" />
     <Content Include="images\list.png" />
     <Content Include="images\logo.png" />
     <Content Include="images\logofacebook.png" />

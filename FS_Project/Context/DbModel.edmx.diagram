@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="d2bce5c214e04fd4928ae7939f45f24c" Name="Diagram1">
-        <EntityTypeShape EntityType="FSData_ProjectModel.Admin" Width="1.5" PointX="5.75" PointY="7" IsExpanded="true" />
-        <EntityTypeShape EntityType="FSData_ProjectModel.ChuongTruyen" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
+      <Diagram DiagramId="1ef37446d92c4e79ae0e10afea31c2f3" Name="Diagram1">
+        <EntityTypeShape EntityType="FSData_ProjectModel.Admin" Width="1.5" PointX="5.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FSData_ProjectModel.ChuongTruyen" Width="1.5" PointX="5.25" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="FSData_ProjectModel.TacGia" Width="1.5" PointX="0.75" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="FSData_ProjectModel.TheLoai" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="FSData_ProjectModel.TheoDoi" Width="1.5" PointX="5.25" PointY="0.875" IsExpanded="true" />

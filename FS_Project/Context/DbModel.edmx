@@ -23,6 +23,7 @@
           <Property Name="tieuDe" Type="varchar" MaxLength="150" />
           <Property Name="NoiDungChu" Type="ntext" />
           <Property Name="NoiDungAudio" Type="varchar" MaxLength="250" />
+          <Property Name="SoChuong" Type="int" />
           <Property Name="id_Truyen" Type="int" />
         </EntityType>
         <EntityType Name="TacGia">
@@ -215,6 +216,7 @@
           <Property Name="tieuDe" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="NoiDungChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="NoiDungAudio" Type="String" MaxLength="250" FixedLength="false" Unicode="false" />
+          <Property Name="SoChuong" Type="Int32" />
           <Property Name="id_Truyen" Type="Int32" />
           <NavigationProperty Name="Truyen" Relationship="Self.FK__ChuongTru__id_Tr__45F365D3" FromRole="ChuongTruyen" ToRole="Truyen" />
         </EntityType>
@@ -420,6 +422,7 @@
                 <ScalarProperty Name="tieuDe" ColumnName="tieuDe" />
                 <ScalarProperty Name="NoiDungChu" ColumnName="NoiDungChu" />
                 <ScalarProperty Name="NoiDungAudio" ColumnName="NoiDungAudio" />
+                <ScalarProperty Name="SoChuong" ColumnName="SoChuong" />
                 <ScalarProperty Name="id_Truyen" ColumnName="id_Truyen" />
               </MappingFragment>
             </EntityTypeMapping>
