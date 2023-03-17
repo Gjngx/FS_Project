@@ -1,0 +1,277 @@
+﻿.chitiettruyen {
+    display: block;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+    .chitiettruyen .tieude {
+        text-align: left;
+        height: 32.6px;
+        border-bottom: 1px solid #DDD;
+        margin-bottom: 5px;
+    }
+
+        .chitiettruyen .tieude h2 {
+            margin: 10px 0px 1px;
+        }
+
+        .chitiettruyen .tieude hr {
+            margin-top: -1px;
+            margin-left: 0px;
+            width: 190px;
+        }
+
+.col_1 {
+    margin-bottom: 5px;
+    padding: 0;
+    width: 100%;
+    float: left;
+    min-height: 1px;
+    display: block;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 5px;
+    padding: 0 15px 1px;
+    border-bottom: 1px solid #b5b5b5;
+    text-transform: uppercase;
+    float: right;
+    width: 68%;
+    text-align: center;
+}
+
+.khung {
+    display: inline-flex;
+}
+
+.khungchitiet {
+    width: 25%;
+    padding: 0;
+    display: inline-block;
+}
+
+.truyen {
+    margin: 40px 0px 10px 25px;
+}
+
+.anhtruyen img {
+    max-width: 400px;
+    height: 320px;
+}
+
+.info {
+    padding: 5px;
+    width: 87.5%;
+    margin-left: 20px;
+    margin-right: 15px;
+    border-right: 1px solid #DDD;
+    padding-bottom: 20px;
+}
+
+    .info h3 {
+        margin: 0 0 5px;
+        padding: 0;
+        font-size: inherit;
+        display: inline-block;
+        line-height: 1.1;
+        color: inherit;
+    }
+
+    .info a {
+        color: #4E4E4E;
+        text-decoration: none;
+    }
+
+.tomtat {
+    width: 68%;
+    padding: 20px 60px 0;
+    text-align: center;
+    float: left;
+    min-height: 1px;
+}
+
+.cottruyen {
+    height: 250px;
+    margin-top: 10px;
+    font-size: 16px;
+    overflow: hidden;
+    text-align: left;
+}
+
+.btnxemthem {
+    text-align: right;
+    position: relative;
+    height: 22px;
+}
+
+.btnxt {
+    margin-top: 5px;
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.chuongmoi {
+    text-align: left;
+}
+
+.cacchuongmoi {
+    font-size: 16px;
+    text-transform: uppercase;
+    height: 30px;
+    line-height: 30px;
+    width: 100%;
+    margin: 15px 0 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+    .cacchuongmoi h3 {
+        line-height: 29px;
+        border-bottom: 1px solid #000;
+        margin: 0;
+        padding: 0;
+        font-size: inherit;
+        display: inline-block;
+        font-family: inherit;
+        font-weight: 500;
+    }
+
+.motchuongmoi {
+    list-style: none;
+    padding-left: 15px;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+    .motchuongmoi li {
+        padding: 1px 0;
+    }
+
+        .motchuongmoi li a {
+            font-size: 15px;
+            line-height: 18px;
+            display: inline;
+            margin: 0;
+            color: #4e4e4e;
+            text-decoration: none;
+        }
+
+        .motchuongmoi li :hover {
+            color: #ccc;
+        }
+
+.danhsachchuong {
+    margin-top: 10px;
+    padding: 0;
+    width: 100%;
+    display: flow-root;
+    min-height: 1px;
+}
+
+.title-danhsachchuong {
+    margin-bottom: 15px;
+    text-align: left;
+    height: 33px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+    .title-danhsachchuong h2 {
+        font-size: 20px;
+        height: 32px;
+        line-height: 40px;
+        border-bottom: 1px solid #4e4e4e;
+        margin: 0;
+        padding: 0;
+        display: inline-block;
+    }
+
+.dschuong {
+    margin: 0;
+}
+
+.cotchuong {
+    width: 50%;
+    float: left;
+    min-height: 1px;
+}
+
+.dscotchuong {
+    list-style: none;
+    padding-left: 15px;
+    text-align: left;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+    .dscotchuong li {
+        padding: 5px 0;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        cursor: pointer;
+    }
+
+    .dscotchuong a {
+        font-size: 15px;
+        line-height: 18px;
+        display: inline;
+        margin: 0;
+        color: #4e4e4e;
+        text-decoration: none;
+        background-color: transparent;
+    }
+
+        .dscotchuong a :hover {
+            color: #ccc;
+        }
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        border: 1px solid #ddd;
+    }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        .pagination a:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .pagination a:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }

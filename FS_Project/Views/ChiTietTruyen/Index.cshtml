@@ -1,0 +1,432 @@
+﻿@model FS_Project.Models.ViewTruyen
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<link rel="stylesheet" href="~/Content/StyleFS-ChiTietTruyen.css">
+<div class="body" style="margin: 60px 70px;">
+    <div class="chitiettruyen">
+        <div class="col_1">
+            <div class="tieude">
+                <h2>Thông tin truyện</h2>
+                <hr>
+            </div>
+            <h3 class="title">@Model.tentruyen</h3>
+            <div class="khung">
+                <div class="khungchitiet">
+                    <div class="truyen">
+                        <div class="anhtruyen">
+                            <img src="~/images/imgTruyen/@Model.anhtruyen"
+                                 alt="@Model.tentruyen" itemprop="image" />
+                        </div>
+                    </div>
+                    <div class="info">
+                        <div>
+                            <h3>Tác giả:</h3>
+                            <a itemprop="author" href="#"
+                               title="@Model.tentacgia">@Model.tentacgia</a>
+                        </div>
+                        <div>
+                            <h3>Thể loại:</h3>
+                            <a itemprop="genre" href="#" title="@Model.tentheloai">@Model.tentheloai</a>,
+                            <a itemprop="genre" href="#" title="Khoa Huyễn">
+                                Khoa
+                                Huyễn
+                            </a>
+                        </div>
+                        <div>
+                            <h3>Trạng thái:</h3>
+                            <span class="text-success">Full</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="tomtat">
+                    <div class="rate">
+                        <div class="danhgia">
+                            <em>
+                                Đánh giá:
+                                <strong><span>5.5</span></strong>
+                                /<span>10</span>
+                                từ <strong><span>1652</span> lượt</strong>
+                            </em>
+                        </div>
+                    </div>
+                    <section class="cottruyen">
+                        <p style="text-align: justify; ">@Model.tomtat</p>
+                        <p style="text-align: justify; "><br></p>
+                    </section>
+                    <div class="btnxemthem">
+                        <a class="btnxt" title="Xem thêm">Xem thêm »</a>
+                    </div>
+                    <div class="chuongmoi">
+                        <div class="cacchuongmoi">
+                            <h3>Các chương mới nhất</h3>
+                        </div>
+                        <ul class="motchuongmoi">
+                            <li>
+                                <a href="#"
+                                   title="Chương 171: cuối">
+                                    <span class="chapter-text">
+                                        <span>
+                                            Chương 171:
+                                            cuối
+                                        </span>
+                                    </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Chương 170">
+                                    <span class="chapter-text"><span>Chương 170</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Chương 169">
+                                    <span class="chapter-text"><span>Chương 169</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Chương 168">
+                                    <span class="chapter-text"><span>Chương 168</span></span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" title="Chương 167">
+                                    <span class="chapter-text"><span>Chương 167</span></span>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row title-list">
+        </div>
+        <div class="danhsachchuong">
+            <div class="title-danhsachchuong">
+                <h2>Danh sách chương</h2>
+            </div>
+            <div class="dschuong">
+                <div class="cotchuong">
+                    <ul class="dscotchuong">
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-1"
+                               title="Đô Thị Thần Nhân - Chương 1">
+                                <span class="chapter-text">Chương 1</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-2"
+                               title="Đô Thị Thần Nhân - Chương 2">
+                                <span class="chapter-text">Chương 2</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-3"
+                               title="Đô Thị Thần Nhân - Chương 3">
+                                <span class="chapter-text">Chương 3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-4"
+                               title="Đô Thị Thần Nhân - Chương 4">
+                                <span class="chapter-text">Chương 4</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-5"
+                               title="Đô Thị Thần Nhân - Chương 5">
+                                <span class="chapter-text">Chương 5</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-6"
+                               title="Đô Thị Thần Nhân - Chương 6">
+                                <span class="chapter-text">Chương 6</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-7"
+                               title="Đô Thị Thần Nhân - Chương 7">
+                                <span class="chapter-text">Chương 7</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-8"
+                               title="Đô Thị Thần Nhân - Chương 8">
+                                <span class="chapter-text">Chương 8</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-9"
+                               title="Đô Thị Thần Nhân - Chương 9">
+                                <span class="chapter-text">Chương 9</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-10"
+                               title="Đô Thị Thần Nhân - Chương 10">
+                                <span class="chapter-text">Chương 10</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-11"
+                               title="Đô Thị Thần Nhân - Chương 11">
+                                <span class="chapter-text">Chương 11</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-12"
+                               title="Đô Thị Thần Nhân - Chương 12">
+                                <span class="chapter-text">Chương 12</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-13"
+                               title="Đô Thị Thần Nhân - Chương 13">
+                                <span class="chapter-text">Chương 13</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-14"
+                               title="Đô Thị Thần Nhân - Chương 14">
+                                <span class="chapter-text">Chương 14</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-15"
+                               title="Đô Thị Thần Nhân - Chương 15">
+                                <span class="chapter-text">Chương 15</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-16"
+                               title="Đô Thị Thần Nhân - Chương 16">
+                                <span class="chapter-text">Chương 16</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-17"
+                               title="Đô Thị Thần Nhân - Chương 17">
+                                <span class="chapter-text">Chương 17</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-18"
+                               title="Đô Thị Thần Nhân - Chương 18">
+                                <span class="chapter-text">Chương 18</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-19"
+                               title="Đô Thị Thần Nhân - Chương 19">
+                                <span class="chapter-text">Chương 19</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-20"
+                               title="Đô Thị Thần Nhân - Chương 20">
+                                <span class="chapter-text">Chương 20</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-21"
+                               title="Đô Thị Thần Nhân - Chương 21">
+                                <span class="chapter-text">Chương 21</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-22"
+                               title="Đô Thị Thần Nhân - Chương 22">
+                                <span class="chapter-text">Chương 22</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-23"
+                               title="Đô Thị Thần Nhân - Chương 23">
+                                <span class="chapter-text">Chương 23</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-24"
+                               title="Đô Thị Thần Nhân - Chương 24">
+                                <span class="chapter-text">Chương 24</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-25"
+                               title="Đô Thị Thần Nhân - Chương 25">
+                                <span class="chapter-text">Chương 25</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="cotchuong">
+                    <ul class="dscotchuong">
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-26"
+                               title="Đô Thị Thần Nhân - Chương 26">
+                                <span class="chapter-text">Chương 26</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-27"
+                               title="Đô Thị Thần Nhân - Chương 27">
+                                <span class="chapter-text">Chương 27</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-28"
+                               title="Đô Thị Thần Nhân - Chương 28">
+                                <span class="chapter-text">Chương 28</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-29"
+                               title="Đô Thị Thần Nhân - Chương 29">
+                                <span class="chapter-text">Chương 29</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-30"
+                               title="Đô Thị Thần Nhân - Chương 30">
+                                <span class="chapter-text">Chương 30</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-31"
+                               title="Đô Thị Thần Nhân - Chương 31">
+                                <span class="chapter-text">Chương 31</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-32"
+                               title="Đô Thị Thần Nhân - Chương 32">
+                                <span class="chapter-text">Chương 32</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-33"
+                               title="Đô Thị Thần Nhân - Chương 33">
+                                <span class="chapter-text">Chương 33</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-34"
+                               title="Đô Thị Thần Nhân - Chương 34">
+                                <span class="chapter-text">Chương 34</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-35"
+                               title="Đô Thị Thần Nhân - Chương 35">
+                                <span class="chapter-text">Chương 35</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-36"
+                               title="Đô Thị Thần Nhân - Chương 36">
+                                <span class="chapter-text">Chương 36</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-37"
+                               title="Đô Thị Thần Nhân - Chương 37">
+                                <span class="chapter-text">Chương 37</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-38"
+                               title="Đô Thị Thần Nhân - Chương 38">
+                                <span class="chapter-text">Chương 38</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-39"
+                               title="Đô Thị Thần Nhân - Chương 39">
+                                <span class="chapter-text">Chương 39</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-40"
+                               title="Đô Thị Thần Nhân - Chương 40">
+                                <span class="chapter-text">Chương 40</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-41"
+                               title="Đô Thị Thần Nhân - Chương 41">
+                                <span class="chapter-text">Chương 41</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-42"
+                               title="Đô Thị Thần Nhân - Chương 42">
+                                <span class="chapter-text">Chương 42</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-43"
+                               title="Đô Thị Thần Nhân - Chương 43">
+                                <span class="chapter-text">Chương 43</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-44"
+                               title="Đô Thị Thần Nhân - Chương 44">
+                                <span class="chapter-text">Chương 44</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-45"
+                               title="Đô Thị Thần Nhân - Chương 45">
+                                <span class="chapter-text">Chương 45</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-46"
+                               title="Đô Thị Thần Nhân - Chương 46">
+                                <span class="chapter-text">Chương 46</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-47"
+                               title="Đô Thị Thần Nhân - Chương 47">
+                                <span class="chapter-text">Chương 47</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-48"
+                               title="Đô Thị Thần Nhân - Chương 48">
+                                <span class="chapter-text">Chương 48</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-49"
+                               title="Đô Thị Thần Nhân - Chương 49">
+                                <span class="chapter-text">Chương 49</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://doctruyen.me/do-thi-than-nhan/chuong-50"
+                               title="Đô Thị Thần Nhân - Chương 50">
+                                <span class="chapter-text">Chương 50</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pagination">
+                <a href="#">&laquo;</a>
+                <a href="#">1</a>
+                <a class="active" href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#">5</a>
+                <a href="#">6</a>
+                <a href="#">&raquo;</a>
+            </div>
+        </div>
+    </div>
+</div>
+
