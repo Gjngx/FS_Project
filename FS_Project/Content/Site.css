@@ -77,6 +77,8 @@
     margin: 0px -7.7888888px -7.8888px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0px, 1fr));
+    left: 0;
+    bottom: 0;
 }
 
 .b1 {

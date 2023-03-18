@@ -185,6 +185,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\StyleFS-ChiTietTruyen.css" />
+    <Content Include="Content\StyleFS-DocTruyen.css" />
     <Content Include="Content\StyleFS-TrangChu.css" />
     <Content Include="Context\DbModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>

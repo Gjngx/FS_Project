@@ -1,0 +1,30 @@
+﻿
+.doctruyen {
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1% 3%;
+}
+
+.btn-chuong {
+    text-align: center;
+}
+
+.btn-next-chuong {
+    cursor: pointer;
+    font-size: 16px;
+    padding: 0.2%;
+    color: #ffffff !important;
+    border-radius: 4px;
+    background: #32CD32;
+    border: 1px solid #32CD32;
+    transition: 0.4s;
+    text-decoration: none;
+    margin: 4px 2px;
+    display: inline-block;
+}
+
+    .btn-next-chuong:hover {
+        background: #008000;
+        text-decoration: none;
+    }
