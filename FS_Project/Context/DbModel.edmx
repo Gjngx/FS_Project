@@ -9,7 +9,7 @@
           <Key>
             <PropertyRef Name="id_Admin" />
           </Key>
-          <Property Name="id_Admin" Type="int" Nullable="false" />
+          <Property Name="id_Admin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserName" Type="varchar" MaxLength="50" />
           <Property Name="PassWords" Type="varchar" MaxLength="50" />
           <Property Name="TrangThai" Type="bit" />
@@ -18,7 +18,7 @@
           <Key>
             <PropertyRef Name="id_Chuong" />
           </Key>
-          <Property Name="id_Chuong" Type="int" Nullable="false" />
+          <Property Name="id_Chuong" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenChuong" Type="nvarchar" MaxLength="255" />
           <Property Name="tieuDe" Type="varchar" MaxLength="150" />
           <Property Name="NoiDungChu" Type="ntext" />
@@ -30,7 +30,7 @@
           <Key>
             <PropertyRef Name="id_TacGia" />
           </Key>
-          <Property Name="id_TacGia" Type="int" Nullable="false" />
+          <Property Name="id_TacGia" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenTacGia" Type="nvarchar" MaxLength="150" />
           <Property Name="TieuDe" Type="varchar" MaxLength="150" />
         </EntityType>
@@ -38,7 +38,7 @@
           <Key>
             <PropertyRef Name="id_TheLoai" />
           </Key>
-          <Property Name="id_TheLoai" Type="int" Nullable="false" />
+          <Property Name="id_TheLoai" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TenTheLoai" Type="nvarchar" MaxLength="150" />
           <Property Name="TieuDe" Type="varchar" MaxLength="150" />
         </EntityType>
@@ -46,7 +46,7 @@
           <Key>
             <PropertyRef Name="id_TheoDoi" />
           </Key>
-          <Property Name="id_TheoDoi" Type="int" Nullable="false" />
+          <Property Name="id_TheoDoi" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_Truyen" Type="int" />
           <Property Name="id_User" Type="int" />
         </EntityType>
@@ -55,13 +55,13 @@
             <PropertyRef Name="id_TrangThai" />
           </Key>
           <Property Name="id_TrangThai" Type="int" Nullable="false" />
-          <Property Name="TrangThai" Type="varchar" MaxLength="150" />
+          <Property Name="TrangThai" Type="nvarchar" MaxLength="150" />
         </EntityType>
         <EntityType Name="Truyen">
           <Key>
             <PropertyRef Name="id_Truyen" />
           </Key>
-          <Property Name="id_Truyen" Type="int" Nullable="false" />
+          <Property Name="id_Truyen" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="id_TacGia" Type="int" />
           <Property Name="id_TheLoai" Type="int" />
           <Property Name="id_TrangThai" Type="int" />
@@ -76,7 +76,7 @@
           <Key>
             <PropertyRef Name="id_User" />
           </Key>
-          <Property Name="id_User" Type="int" Nullable="false" />
+          <Property Name="id_User" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="HoTen" Type="nvarchar" MaxLength="150" />
           <Property Name="GioiTinh" Type="nvarchar" MaxLength="50" />
           <Property Name="NgaySinh" Type="date" />
@@ -202,7 +202,7 @@
           <Key>
             <PropertyRef Name="id_Admin" />
           </Key>
-          <Property Name="id_Admin" Type="Int32" Nullable="false" />
+          <Property Name="id_Admin" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="UserName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="PassWords" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
           <Property Name="TrangThai" Type="Boolean" />
@@ -211,7 +211,7 @@
           <Key>
             <PropertyRef Name="id_Chuong" />
           </Key>
-          <Property Name="id_Chuong" Type="Int32" Nullable="false" />
+          <Property Name="id_Chuong" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenChuong" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
           <Property Name="tieuDe" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <Property Name="NoiDungChu" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
@@ -224,7 +224,7 @@
           <Key>
             <PropertyRef Name="id_TacGia" />
           </Key>
-          <Property Name="id_TacGia" Type="Int32" Nullable="false" />
+          <Property Name="id_TacGia" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenTacGia" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="TieuDe" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Truyens" Relationship="Self.FK__Truyen__id_TacGi__412EB0B6" FromRole="TacGia" ToRole="Truyen" />
@@ -233,7 +233,7 @@
           <Key>
             <PropertyRef Name="id_TheLoai" />
           </Key>
-          <Property Name="id_TheLoai" Type="Int32" Nullable="false" />
+          <Property Name="id_TheLoai" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="TenTheLoai" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="TieuDe" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="Truyens" Relationship="Self.FK__Truyen__id_TheLo__4222D4EF" FromRole="TheLoai" ToRole="Truyen" />
@@ -242,7 +242,7 @@
           <Key>
             <PropertyRef Name="id_TheoDoi" />
           </Key>
-          <Property Name="id_TheoDoi" Type="Int32" Nullable="false" />
+          <Property Name="id_TheoDoi" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_Truyen" Type="Int32" />
           <Property Name="id_User" Type="Int32" />
           <NavigationProperty Name="Truyen" Relationship="Self.FK__TheoDoi__id_Truy__48CFD27E" FromRole="TheoDoi" ToRole="Truyen" />
@@ -253,14 +253,14 @@
             <PropertyRef Name="id_TrangThai" />
           </Key>
           <Property Name="id_TrangThai" Type="Int32" Nullable="false" />
-          <Property Name="TrangThai1" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="TrangThai1" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Truyens" Relationship="Self.FK__Truyen__id_Trang__4316F928" FromRole="TrangThai" ToRole="Truyen" />
         </EntityType>
         <EntityType Name="Truyen">
           <Key>
             <PropertyRef Name="id_Truyen" />
           </Key>
-          <Property Name="id_Truyen" Type="Int32" Nullable="false" />
+          <Property Name="id_Truyen" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="id_TacGia" Type="Int32" />
           <Property Name="id_TheLoai" Type="Int32" />
           <Property Name="id_TrangThai" Type="Int32" />
@@ -280,7 +280,7 @@
           <Key>
             <PropertyRef Name="id_User" />
           </Key>
-          <Property Name="id_User" Type="Int32" Nullable="false" />
+          <Property Name="id_User" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="HoTen" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
           <Property Name="GioiTinh" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="NgaySinh" Type="DateTime" Precision="0" />

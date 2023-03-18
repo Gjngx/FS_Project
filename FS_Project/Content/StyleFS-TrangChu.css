@@ -21,6 +21,7 @@
     .tnb img {
         width: 90%;
         border-radius: 4px;
+        height: 80%;
     }
 
 .main {
@@ -52,8 +53,11 @@
     .tm img {
         width: 90%;
         border-radius: 4px;
+        height: 80%;
     }
-
+    .tm h4 {
+        margin-top: 10px;
+    }
 .pagination {
     display: inline-block;
     padding: 10px;

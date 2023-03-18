@@ -4,6 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     var truyennoibat = (List<FS_Project.Context.Truyen>)ViewBag.truyennoibat;
     var truyenmoi = (List<FS_Project.Context.Truyen>)ViewBag.truyenmoi;
+    var DSTheLoai = (List<FS_Project.Context.TheLoai>)ViewBag.DSTheLoai;
 }
 <link rel="stylesheet" href="~/Content/StyleFS-TrangChu.css">
 <div class="body" style="margin: 60px 70px;">
@@ -14,7 +15,7 @@
             {
                 <div class="tnb">
                     <a style="text-decoration: none; color: black" href="@Url.Action("Index","ChiTietTruyen", new {id = tnb.id_Truyen})">
-                        <img style="width: 195.656px; height: 293.023px; border-radius: 4px;" src="~/images/imgTruyen/@tnb.AnhTruyen" title="@tnb.TenTruyen">
+                        <img src="~/images/imgTruyen/@tnb.AnhTruyen" title="@tnb.TenTruyen">
                         <h4>@tnb.TenTruyen</h4>
                     </a>
                 </div>
@@ -30,7 +31,7 @@
                 {
                     <div class="tm">
                         <a style="text-decoration: none; color: black" href="@Url.Action("Index","ChiTietTruyen", new {id = tm.id_Truyen})">
-                            <img style="width: 195.656px; height: 293.023px; border-radius: 4px;" src="~/images/imgTruyen/@tm.AnhTruyen" title="@tm.TenTruyen">
+                            <img src="~/images/imgTruyen/@tm.AnhTruyen" title="@tm.TenTruyen">
                             <h4>@tm.TenTruyen</h4>
                         </a>
                     </div>
@@ -53,24 +54,12 @@
                 <h2 style="text-align: center;">Thể loại</h2>
             </div>
             <div class="row-theloai">
-                <div class="col-theloai">
-                <a class="" href="https://doctruyen.me/the-loai/convert" title="Truyện Convert">Convert</a>
-                </div>
-                <div class="col-theloai">
-                <a class="" href="https://doctruyen.me/the-loai/tien-hiep" title="Truyện Tiên Hiệp">Tiên Hiệp</a>
-                </div>
-                <div class="col-theloai">
-                <a class="" href="https://doctruyen.me/the-loai/kiem-hiep" title="Truyện Kiếm Hiệp">Kiếm Hiệp</a>
-                </div>
-                <div class="col-theloai">
-                <a class="" href="https://doctruyen.me/the-loai/ngon-tinh" title="Truyện Ngôn Tình">Ngôn Tình</a>
-                </div>
-                <div class="col-theloai">
-                <a class="" href="https://doctruyen.me/the-loai/dam-my" title="Truyện Đam Mỹ">Đam Mỹ</a>
-                </div>
-                <div class="col-theloai">
-                <a class="" href="https://doctruyen.me/the-loai/quan-truong" title="Truyện Quan Trường">Quan Trường</a>
-                </div>
+                @foreach (var tl in DSTheLoai)
+                {
+                    <div class="col-theloai">
+                        <a class="" href="#" title="Truyện @tl.TenTheLoai">@tl.TenTheLoai</a>
+                    </div>
+                }
             </div>
         </div>
     </div>

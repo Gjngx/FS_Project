@@ -11,6 +11,14 @@ namespace FS_Project.DAO
     {
         FSData_ProjectEntities db = new FSData_ProjectEntities();
 
+        public List<ChuongTruyen> xuatchuongmoi(long? id, int count)
+        {
+            return db.ChuongTruyens.Where(x => x.id_Truyen == id).OrderByDescending(x => x.SoChuong).Take(count).ToList();
+        }
+        public List<ChuongTruyen> xuatchuong(long? id)
+        {
+            return db.ChuongTruyens.Where(x => x.id_Truyen == id).OrderBy(x => x.SoChuong).ToList();
+        }
         public ViewTruyen XemChiTietTruyen(long? id)
         {
             var truyen = db.Truyens.Find(id);

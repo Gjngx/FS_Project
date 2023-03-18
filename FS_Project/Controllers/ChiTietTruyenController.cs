@@ -13,6 +13,8 @@ namespace FS_Project.Controllers
         public ActionResult Index(long? id)
         {
             var truyen = new TruyenDAO().XemChiTietTruyen(id);
+            ViewBag.chuongtruyen = new TruyenDAO().xuatchuong(id);
+            ViewBag.chuongtruyenmoi = new TruyenDAO().xuatchuongmoi(id, 3);
             return View(truyen);
         }
     }

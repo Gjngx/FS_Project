@@ -17,6 +17,7 @@ namespace FS_Project.Controllers
             var dao = new TruyenDAO();
             ViewBag.truyenmoi = dao.truyenmoi(20);
             ViewBag.truyennoibat = dao.DSTruyenNoiBat(5);
+            ViewBag.DSTheLoai = new TheLoaiDAO().DSTheLoai();
             return View();
         }
         
