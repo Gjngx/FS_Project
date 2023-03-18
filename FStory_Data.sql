@@ -1881,3 +1881,7 @@ bất luận cái gì tương lai! </p>
 <p>Nhưng là, ngay lúc này, Tần Trầm lại là nói chuyện. </p>
 <p>&quot;Thật xin lỗi, ta cự tuyệt!&quot; </p>
 <p>Sau một khắc, lạnh lẽo lời nói, truyền khắp toàn trường.</p>', null, 5, 2)
+
+--select id_Chuong
+--from ChuongTruyen
+--where id_Truyen = 2

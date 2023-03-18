@@ -55,7 +55,7 @@
                             @foreach (var ctm in Chuongtruyenmois)
                             {
                                 <li>
-                                    <a href="#" title="@ctm.TenChuong">
+                                    <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {id = ctm.id_Chuong})" title="@ctm.TenChuong">
                                         <span class="chapter-text"><span>@ctm.TenChuong</span></span>
                                     </a>
                                 </li>

@@ -1,0 +1,23 @@
+﻿@model FS_Project.Context.ChuongTruyen
+@{
+    ViewBag.Title = "DocTruyen";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var Truyen = (FS_Project.Models.ViewTruyen)ViewBag.Truyen;
+    var ChuongTruyen = (List<FS_Project.Context.ChuongTruyen>)ViewBag.Chuongtruyen;
+}
+
+<link rel="stylesheet" href="~/Content/StyleFS-DocTruyen.css">
+<div class="body" style="margin: 60px 70px;">
+    <div class="doctruyen">
+        <h2>@Truyen.tentruyen</h2>
+        <h3>@Model.TenChuong</h3>
+        <div class="noidung">
+            @Html.Raw(Model.NoiDungChu)
+        </div>
+        <div class="btn-chuong">
+            <!-- <a href="#" class="btn-next-chuong" rel="nofollow">Chương sau</a> -->
+            <a href="#" class="btn-next-chuong" rel="nofollow">Chương tiếp</a>
+        </div>
+    </div>
+</div>
+

@@ -16,7 +16,6 @@ namespace FS_Project.DAO
         {
             return db.ChuongTruyens.Find(id);
         }
-
         public List<ChuongTruyen> xuatchuongmoi(long? id, int count)
         {
             return db.ChuongTruyens.Where(x => x.id_Truyen == id).OrderByDescending(x => x.SoChuong).Take(count).ToList();
