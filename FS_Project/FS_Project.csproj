@@ -129,45 +129,15 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="Context\Admin.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\ChuongTruyen.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\DbModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DbModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\DbModel.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-    </Compile>
-    <Compile Include="Context\DbModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DbModel.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Context\TacGia.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\TheLoai.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\TheoDoi.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\TrangThai.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\Truyen.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Context\User.cs">
-      <DependentUpon>DbModel.tt</DependentUpon>
-    </Compile>
+    <Compile Include="Context\Admin.cs" />
+    <Compile Include="Context\ChuongTruyen.cs" />
+    <Compile Include="Context\DbModel.cs" />
+    <Compile Include="Context\TacGia.cs" />
+    <Compile Include="Context\TheLoai.cs" />
+    <Compile Include="Context\TheoDoi.cs" />
+    <Compile Include="Context\TrangThai.cs" />
+    <Compile Include="Context\Truyen.cs" />
+    <Compile Include="Context\User.cs" />
     <Compile Include="Controllers\ChiTietTruyenController.cs" />
     <Compile Include="Controllers\TrangChuController.cs" />
     <Compile Include="DAO\TheLoaiDAO.cs" />
@@ -187,19 +157,6 @@
     <Content Include="Content\StyleFS-ChiTietTruyen.css" />
     <Content Include="Content\StyleFS-DocTruyen.css" />
     <Content Include="Content\StyleFS-TrangChu.css" />
-    <Content Include="Context\DbModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DbModel.edmx</DependentUpon>
-      <LastGenOutput>DbModel.Context.cs</LastGenOutput>
-    </Content>
-    <Content Include="Context\DbModel.edmx.diagram">
-      <DependentUpon>DbModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Context\DbModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DbModel.cs</LastGenOutput>
-      <DependentUpon>DbModel.edmx</DependentUpon>
-    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -236,10 +193,6 @@
     <Content Include="images\user.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Context\DbModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DbModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

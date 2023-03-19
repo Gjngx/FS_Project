@@ -11,7 +11,7 @@ namespace FS_Project.DAO
 {
     public class TruyenDAO
     {
-        FSData_ProjectEntities db = new FSData_ProjectEntities();
+        DbModel db = new DbModel();
 
         public int? xuatchuongcuoi(long? id)
         {

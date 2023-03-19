@@ -8,7 +8,7 @@ namespace FS_Project.DAO
 {
     public class TheLoaiDAO
     {
-        FSData_ProjectEntities db = new FSData_ProjectEntities();
+        DbModel db = new DbModel();
         public List<TheLoai> DSTheLoai()
         {
             return db.TheLoais.OrderBy(x => x.id_TheLoai).ToList();
