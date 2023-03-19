@@ -18,7 +18,6 @@
                 @Html.Raw(Model.NoiDungChu)
             </div>
             <div class="btn-chuong">
-                <!-- <a href="#" class="btn-next-chuong" rel="nofollow">Chương sau</a> -->
                 <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {idTruyen = Model.id_Truyen , soChuong = Model.SoChuong + 1})" class="btn-next-chuong" rel="nofollow">Chương tiếp</a>
             </div>
         }
