@@ -2,8 +2,10 @@
 using FS_Project.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
 using System.Web;
+using System.Web.UI.WebControls;
 
 namespace FS_Project.DAO
 {
@@ -11,6 +13,20 @@ namespace FS_Project.DAO
     {
         FSData_ProjectEntities db = new FSData_ProjectEntities();
 
+        public int? xuatchuongcuoi(long? id)
+        {
+            return db.ChuongTruyens.Where(x => x.id_Truyen == id).Max(x => x.SoChuong);
+        }
+
+        public int nhaychuong(int? idTruyen, int? soChuong)
+        {
+            var idChuong = from chuong in db.ChuongTruyens
+                           where chuong.id_Truyen == idTruyen
+                           where chuong.SoChuong == soChuong
+                           select chuong.id_Chuong;
+            int id = idChuong.First();
+            return id;
+        }
 
         public ChuongTruyen xemchuong(int id)
         {

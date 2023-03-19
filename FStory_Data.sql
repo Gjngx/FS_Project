@@ -1882,6 +1882,172 @@ bất luận cái gì tương lai! </p>
 <p>&quot;Thật xin lỗi, ta cự tuyệt!&quot; </p>
 <p>Sau một khắc, lạnh lẽo lời nói, truyền khắp toàn trường.</p>', null, 5, 2)
 
+INSERT INTO ChuongTruyen VALUES(N'Chương 5', 'chuong-5', N'<p>Vào đêm, Tiêu Dật dừng lại tu luyện.</p>
+<p>Xuyên thấu qua bệ cửa sổ, nhìn về chân trời bên trên bầu trời đầy sao cùng mặt
+trăng.</p>
+<p>Đầy sao, mặt trăng, cùng đất cầu cũng không có khác biệt gì.</p>
+<p>Khác biệt duy nhất, chỉ là linh hồn của mình.</p>
+<p>Có lẽ, còn có một thứ. Tiêu Dật nhìn xem đẩy cửa vào, trong tay bưng lấy đồ ăn
+Y Y, cười cười.</p>
+<p>&quot;Thiếu gia, ăn cơm.&quot; Y Y ngọt ngào nói.</p>
+<p>&quot;Ừm.&quot; Tiêu Dật gật gật đầu.</p>
+<p>Trải qua một ngày tu luyện, chân khí trong cơ thể càng thêm nồng đậm, bất quá
+còn chưa đột phá Phàm cảnh tam trọng.</p>
+<p>Võ đạo tu luyện, vô cùng gian nan.</p>
+<p>Tư chất không tốt võ giả, cuối cùng cả đời đều khó mà đột phá đến Hậu thiên.</p>
+<p>Cho dù là Tiêu gia, cũng có thật nhiều trưởng thành tộc nhân còn ở vào Phàm
+cảnh.</p>
+<p>Một khi đột phá đến Hậu thiên, liền sẽ tự động tấn thăng làm gia tộc chấp sự,
+trong gia tộc có nhất định quyền lên tiếng, gần với trưởng lão.</p>
+<p>Mà chấp sự, to như vậy cái Tiêu gia cũng bất quá hơn mười người thôi.</p>
+<p>Nếu như hôm nay không phải có cái kia ba viên Thối Thể đan, chỉ sợ Tiêu Dật
+lên cấp Phàm cảnh nhị trọng còn cần nhiều thời gian hơn.</p>
+<p>Mặc dù hắn nắm giữ màu tím Võ hồn, nhưng linh khí trong thiên địa dù sao cũng
+là hết sức mỏng manh, còn kém rất rất xa trực tiếp hấp thu đan dược lực lượng
+tốc độ.</p>
+<p>&quot;Nếu là có càng nhiều Thối Thể đan liền tốt.&quot; Tiêu Dật thầm nghĩ.</p>
+<p>Đương nhiên, cũng vẻn vẹn nghĩ, Thối Thể đan mặc dù chỉ là Nhất phẩm đan dược,
+nhưng giá cả không rẻ, trọn vẹn mười lượng một cái.</p>
+<p>gia đình bình thường, nhà ba người, tiền sinh hoạt phí một tháng đều không
+dùng đến năm lượng bạc.</p>
+<p>Cho dù là Tiêu gia loại này con em của đại gia tộc, một cái tháng cũng liền 20
+lượng tiền tiêu vặt thôi.</p>
+<p>Nói cách khác, lấy tiền của mình, một cái tháng đều không mua được hai khỏa
+Thối Thể đan.</p>
+<p>&quot;Theo cái tốc độ này xuống dưới, đột phá đến Phàm cảnh tam trọng, tối thiểu
+cần bốn, năm ngày.&quot; Tiêu Dật có chút buồn rầu.</p>
+<p>Nếu như ý nghĩ của hắn bị cái khác Tiêu gia con em nghe được, nhất định sẽ bị
+mắng to biến thái.</p>
+<p>Phải biết, cho dù là Tiêu gia con em, ở trong Phàm cảnh muốn đột phá nhất
+trọng, đều tối thiểu cần mấy tháng trở lên, thậm chí càng lâu thời gian.</p>
+<p>Liền xem như Tiêu gia nổi danh thiên tài Tiêu Nhược Hàn, nắm giữ cường đại
+Hoàng giai Võ hồn, theo Phàm cảnh nhị trọng đột phá đến tam trọng, cũng đầy đủ
+dùng một cái tháng.</p>
+<p>Võ hồn sở dĩ quyết định võ giả tương lai, lớn nhất thể hiện liền là hấp thu
+thiên địa linh khí tốc độ, từ đó ảnh hưởng tới tu luyện nhanh chậm.</p>
+<p>Càng cao cấp Võ hồn, tốc độ tu luyện càng nhanh.</p>
+<p>&quot;Y Y, ngươi làm gì?&quot; Tiêu Dật chợt thấy Y Y quay người rời đi, hét lại nói.</p>
+<p>&quot;Thiếu gia, ta trở về phòng bếp ăn cơm a.&quot; Y Y nhút nhát trả lời.</p>
+<p>Trước kia Tiêu Dật, chưa từng cho phép Y Y cùng sân khấu ăn cơm. Mà lại, trong
+phòng bếp chỉ biết còn lại chút kém nhất đồ ăn thừa cơm thừa cho Y Y.</p>
+<p>Y Y lúc nào cũng ăn không đủ no.</p>
+<p>&quot;Tọa hạ, cùng một chỗ ăn.&quot; Tiêu Dật nói.</p>
+<p>&quot;Thế nhưng là, thiếu gia ngươi đã nói, Y Y xấu xí, cùng ngươi cùng nhau ăn cơm
+sẽ ảnh hưởng tâm tình của ngươi, cho nên &quot;</p>
+<p>&quot;Để ngươi ngồi xuống thì ngồi xuống, nói lời vô dụng làm gì.&quot; Tiêu Dật quát
+lớn một câu.</p>
+<p>Y Y nhút nhát ngồi xuống, trên mặt đều là vẻ bất an.</p>
+<p>&quot;Gắp thức ăn ăn.&quot; Tiêu Dật thấy Y Y trùm đầu ăn cơm trắng, nói.</p>
+<p>&quot;Nha.&quot; Y Y sợ nhìn Tiêu Dật liếc mắt, phát hiện Tiêu Dật không có nhìn hắn,
+lúc này mới cẩn thận từng li từng tí kẹp gọi món ăn.</p>
+<p>&quot;Cũng kẹp thịt.&quot; Tiêu Dật suýt chút nữa không có tức chết, Y Y quả thực cũng
+chỉ kẹp rau xanh.</p>
+<p>Y Y mặc dù có chút ngốc bẩm sinh, nhưng cũng không phải là chậm chạp.</p>
+<p>Ngược lại, khi còn bé Y Y cực kì thông minh, lanh lợi động lòng người.</p>
+<p>Chỉ có điều, ở trước mặt Tiêu Dật, nàng lúc nào cũng cẩn thận từng li từng tí
+thôi.</p>
+<p>Bỗng nhiên, Tiêu Dật buông xuống trong tay bát đũa, nhàn nhạt liếc nhìn Y Y,
+nói, &quot;Cho ngươi mười giây đồng hồ, đem còn lại đồ ăn ăn sạch.&quot;</p>
+<p>&quot;A?&quot; Y Y ngẩn người, không nghĩ nhiều, lập tức ăn ngấu nghiến.</p>
+<p>Mười giây vừa qua khỏi, trong chén cơm trắng đã thanh không, nhưng thức ăn
+trên bàn còn có không ít.</p>
+<p>&quot;Còn lại từ bỏ, thu thập một chút trở về phòng bếp đi.&quot; Tiêu Dật giọng nói
+biến đến mang theo mệnh lệnh tính.</p>
+<p>&quot;Ừm.&quot; Y Y trong miệng còn có một miệng lớn cơm không thể nuốt xuống, chỉ có
+thể hàm hồ ừ một tiếng, sau đó nhanh chóng thu thập bát đũa.</p>
+<p>Lúc rời đi, nàng có chút thương tâm.</p>
+<p>&quot;Bị thiếu gia đuổi ra ngoài, là ta ảnh hưởng tới thiếu gia tâm tình sao, thiếu
+gia không ăn bao nhiêu phần cơm đây, thiếu gia tối nay sẽ đói bụng đi.&quot; Y Y
+mặc dù trong lòng có chút khổ sở, nhưng vẫn là trước tiên nghĩ đến Tiêu Dật ấm
+no.</p>
+<p>Trong phòng, Tiêu Dật bỗng nhiên đứng lên, duỗi lưng một cái.</p>
+<p>&quot;Thế giới này đồng hành, còn là lần đầu tiên gặp được a, chỉ có điều, thoạt
+nhìn thủ đoạn rất dở.&quot; Tiêu Dật khóe miệng nhếch ra một tia cười lạnh.</p>
+<p>&quot;Ra đi, ở trên nóc nhà nhìn lâu như vậy, không mệt mỏi sao?&quot; Tiêu Dật dường
+như đang lầm bầm lầu bầu.</p>
+<p>Vèo một tiếng, trên nóc nhà một bóng người nhảy xuống tới. Là cái trung niên
+nam giới, ăn mặc một bộ y phục dạ hành, trên mặt có một đầu sẹo đao dữ tợn,
+mặt mũi tràn đầy sát ý.</p>
+<p>&quot;Ngươi phát hiện ta?&quot; Nam tử trung niên nghi ngờ mà hỏi thăm, có chút kinh
+ngạc.</p>
+<p>Tiêu Dật không có trả lời, trực tiếp hỏi, &quot;Ngươi là ai?&quot;</p>
+<p>Nam tử trung niên cười lạnh một tiếng, nói, &quot;Một cái Phàm cảnh nhị trọng phế
+vật thôi, lão tử liền lòng từ bi nói cho ngươi, miễn cho ngươi chết cũng
+không biết chết tại người nào trong tay, lão tử gọi Dương Phục.&quot;</p>
+<p>&quot;Dương Phục?&quot; Tiêu Dật trong trí nhớ có tên của người này.</p>
+<p>Dương Phục, tên hiệu ''Độc chủy'', Phàm cảnh cửu trọng võ giả, Tử Vân thành nổi
+danh sát thủ.</p>
+<p>Người này hành tung quỷ bí, thủ đoạn tàn nhẫn, vì tiền, hắn có thể vì cố chủ
+ám sát bất luận kẻ nào, trên tay tính mệnh từng đống.</p>
+<p>&quot;Nguyên lai là độc chủy, liền ngươi cái này ẩn nấp thủ đoạn, lại còn có thể
+trở thành nổi danh sát thủ, chậc chậc.&quot; Tiêu Dật khinh thường nói.</p>
+<p>Chính xác, tại Tiêu Dật cái này đã từng sát thủ Giới vương người trong mắt,
+cái này Dương Phục ẩn nấp thủ đoạn cực kì thô ráp hạ thấp.</p>
+<p>Ăn cơm thời điểm, cũng là Dương Phục mới vừa tới đến nóc phòng mai phục lúc,
+Tiêu Dật liền đã phát hiện hắn, lúc này mới tìm cái cớ để Y Y rời đi.</p>
+<p>Đổi trước kia, loại này không đủ tư cách sát thủ, Tiêu Dật một bàn tay liền
+có thể chơi chết hắn. Nhưng bây giờ, liền hết sức phiền phức.</p>
+<p>&quot;Ai mời ngươi ra tay?&quot; Tiêu Dật hỏi.</p>
+<p>&quot;Người sắp chết, làm gì hỏi nhiều.&quot; Dương Phục cười lạnh một tiếng.</p>
+<p>&quot;Ngươi không nói ta cũng biết, người muốn mạng ta, đơn giản cứ như vậy mấy
+cái. Mà trả nổi tiền mời được ngươi cái này nổi danh sát thủ, cũng chỉ có Tiêu
+Nhược Hàn.&quot; Tiêu Dật nói.</p>
+<p>Dương Phục nhíu mày, có chút giật mình, nói, &quot;Nhìn đến, Tiêu gia nổi danh phế
+vật không hề giống mặt ngoài đơn giản như vậy a.&quot;</p>
+<p>Hắn mặc dù không có nói rõ, nhưng kỳ thật đã chấp nhận.</p>
+<p>&quot;Bất quá, cũng chỉ thế thôi. Thu người tiền tài, trừ tai hoạ cho người. Tất
+nhiên thu tiền, ta liền không thể để ngươi còn sống nhìn thấy ngày mai mặt
+trời.&quot; Dương Phục dứt lời, từng bước một hướng Tiêu Dật đi đến.</p>
+<p>Hắn cũng không muốn phức tạp, dù sao nơi này là Tử Vân thành một trong tam đại
+gia tộc Tiêu gia, trong gia tộc không thiếu Tiên Thiên cảnh, Hậu Thiên cảnh võ
+giả.</p>
+<p>Tiêu Dật meo lên ánh mắt, nhìn xem dần dần tới gần Dương Phục, trong lòng
+không có sợ.</p>
+<p>Phàm cảnh nhị trọng cùng cửu trọng chênh lệch cực lớn.</p>
+<p>Phàm cảnh nhị trọng, thể nội cái kia bé nhỏ chân khí, nhiều lắm là đủ võ giả
+đánh ra chừng trăm cân cường độ.</p>
+<p>Nhưng Phàm cảnh cửu trọng, đây chính là chỉ thiếu chút nữa liền có thể bước
+vào Hậu Thiên cảnh cường giả, nhẹ nhõm liền có thể đánh ra mấy ngàn cân cường
+độ, thậm chí nhiều hơn.</p>
+<p>Đổi thành người khác, giờ phút này khẳng định đã sớm bị dọa đến không biết làm
+sao.</p>
+<p>Nhưng Tiêu Dật nhìn quen sóng to gió lớn, đương nhiên sẽ không sợ.</p>
+<p>Không thể đối đầu, chỉ có thể dùng trí. Dựa vào bản thân hình ý ngũ tuyệt còn
+có kinh nghiệm chiến đấu, thêm chút thủ đoạn, hẳn là có thể tạm thời bảo
+mệnh cùng kéo dài thời gian.</p>
+<p>Một khi động tĩnh của nơi này làm lớn chuyện, trong gia tộc Tiên thiên trưởng
+lão liền có thể lập tức cảm giác được cũng chạy đến.</p>
+<p>&quot;Uống.&quot; Tiêu Dật khẽ quát một tiếng, bày ra tư thế chiến đấu.</p>
+<p>&quot;Xùy.&quot; Dương Phục khinh thường bật cười một tiếng, trong tay bỗng nhiên xuất
+hiện một cái đen như mực chủy thủ.</p>
+<p>Đây chính là hắn Võ hồn, ''Độc chủy'', đẳng cấp là Hoàng giai.</p>
+<p>Nắm giữ Khí võ hồn võ giả, có thể tiêu hao chân khí trong cơ thể, đem Võ hồn
+hình chiếu tạm thời ngưng tụ ra, vì mấy sử dụng, phát huy ra cực mạnh sức
+chiến đấu.</p>
+<p>&quot;Dương Phục, nơi này chính là Tiêu gia, ta chính là thiếu gia chủ, ngươi giết
+ta, liền không sợ lọt vào Tiêu gia trả thù?&quot; Tiêu Dật lạnh giọng hỏi, trong
+mắt tìm Dương Phục sơ hở.</p>
+<p>&quot;Trả thù? Ha ha, các ngươi những đại gia tộc này con em, sinh ra đã có gia tộc
+che chở, có rất nhiều tài nguyên tu luyện, tu luyện được cũng nhanh.&quot;</p>
+<p>&quot;Mà lão tử loại này võ giả bình thường, mỗi ngày liều sống liều chết, thậm
+chí lấy mạng đi liều, mới có thể đạt được tài nguyên tu luyện.&quot;</p>
+<p>&quot;Nếu không thì, bằng vào ta Hoàng giai Võ hồn, giờ phút này đã sớm đột phá đến
+Hậu thiên, thậm chí Tiên Thiên cảnh, cái nào đến nỗi hay là Phàm cảnh cửu
+trọng.&quot;</p>
+<p>&quot;Hừ, mạng của ngươi có thể đáng giá không ít tiền. Cầm lần này thù lao, ta
+có thể mua càng nhiều đan dược, rất nhanh liền có thể đột phá Hậu thiên. Đến
+lúc đó bỏ trốn mất dạng, ngươi Tiêu gia cũng không có biện pháp bắt ta.&quot;</p>
+<p>Dương Phục đã sớm trong lòng vặn vẹo, đối với Tiêu Dật loại gia tộc này con em
+tràn ngập cừu hận cùng căm thù.</p>
+<p>&quot;Yên tâm, ta độc chủy, độc tính rất mạnh. Chỉ cần dính vào một chút, ngươi sẽ
+chết cực kỳ nhanh, sẽ không đau nhức thật lâu.&quot; Dương Phục thâm trầm cười.</p>
+<p>Hắn đã đi tới Tiêu Dật 1m trước đó, hắn vẫn luôn mười phần tự tin, muốn giết
+một cái Phàm cảnh nhị trọng, với hắn mà nói dễ như trở bàn tay.</p>
+<p>&quot;Đi chết đi.&quot; Dương Phục chủy thủ hung hăng hướng Tiêu Dật đâm tới.</p>
+<p>Tiêu Dật ánh mắt lẫm liệt, thân thể quỷ dị vặn vẹo một cái, khó khăn lắm tránh
+thoát ám sát.</p>
+<p>Hình ý ngũ tuyệt một trong, hình rắn.</p>', null, 5, 1)
+
 --select id_Chuong
 --from ChuongTruyen
---where id_Truyen = 2
+--where id_Truyen = 1 and SoChuong = 4

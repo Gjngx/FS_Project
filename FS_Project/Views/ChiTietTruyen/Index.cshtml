@@ -55,7 +55,7 @@
                             @foreach (var ctm in Chuongtruyenmois)
                             {
                                 <li>
-                                    <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {id = ctm.id_Chuong})" title="@ctm.TenChuong">
+                                    <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {idTruyen = ctm.id_Truyen , soChuong = ctm.SoChuong})" title="@ctm.TenChuong">
                                         <span class="chapter-text"><span>@ctm.TenChuong</span></span>
                                     </a>
                                 </li>
@@ -77,7 +77,7 @@
                         @foreach (var ct in Chuongtruyens)
                         {
                             <li>
-                                <a href="#" title="@ct.Truyen.TenTruyen - @ct.TenChuong">
+                                <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {idTruyen = ct.id_Truyen , soChuong = ct.SoChuong} )" title="@ct.Truyen.TenTruyen - @ct.TenChuong">
                                     <span class="chapter-text"><span>@ct.TenChuong</span></span>
                                 </a>
                             </li>

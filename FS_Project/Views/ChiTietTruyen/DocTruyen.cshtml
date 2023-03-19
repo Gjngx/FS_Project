@@ -4,6 +4,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
     var Truyen = (FS_Project.Models.ViewTruyen)ViewBag.Truyen;
     var ChuongTruyen = (List<FS_Project.Context.ChuongTruyen>)ViewBag.Chuongtruyen;
+    var ChuongCuoi = ViewBag.Chuongcuoi;
 }
 
 <link rel="stylesheet" href="~/Content/StyleFS-DocTruyen.css">
@@ -11,13 +12,35 @@
     <div class="doctruyen">
         <h2>@Truyen.tentruyen</h2>
         <h3>@Model.TenChuong</h3>
-        <div class="noidung">
-            @Html.Raw(Model.NoiDungChu)
-        </div>
-        <div class="btn-chuong">
-            <!-- <a href="#" class="btn-next-chuong" rel="nofollow">Chương sau</a> -->
-            <a href="#" class="btn-next-chuong" rel="nofollow">Chương tiếp</a>
-        </div>
+        @if (Model.SoChuong == 1)
+        {
+            <div class="noidung">
+                @Html.Raw(Model.NoiDungChu)
+            </div>
+            <div class="btn-chuong">
+                <!-- <a href="#" class="btn-next-chuong" rel="nofollow">Chương sau</a> -->
+                <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {idTruyen = Model.id_Truyen , soChuong = Model.SoChuong + 1})" class="btn-next-chuong" rel="nofollow">Chương tiếp</a>
+            </div>
+        }
+        else if (Model.SoChuong == ChuongCuoi)
+        {
+            <div class="noidung">
+                @Html.Raw(Model.NoiDungChu)
+            </div>
+            <div class="btn-chuong">
+                <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {idTruyen = Model.id_Truyen , soChuong = Model.SoChuong - 1})" class="btn-next-chuong" rel="nofollow">Chương trước</a>
+            </div>
+        }
+        else
+        {
+            <div class="noidung">
+                @Html.Raw(Model.NoiDungChu)
+            </div>
+            <div class="btn-chuong">
+                <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {idTruyen = Model.id_Truyen , soChuong = Model.SoChuong - 1})" class="btn-next-chuong" rel="nofollow">Chương trước</a>
+                <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {idTruyen = Model.id_Truyen , soChuong = Model.SoChuong + 1})" class="btn-next-chuong" rel="nofollow">Chương tiếp</a>
+            </div>
+        }
     </div>
 </div>
 

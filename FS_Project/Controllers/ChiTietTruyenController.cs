@@ -18,11 +18,13 @@ namespace FS_Project.Controllers
             return View(truyen);
         }
 
-        public ActionResult DocTruyen (int id)
+        public ActionResult DocTruyen (int? idTruyen, int? soChuong)
         {
+            int id = new TruyenDAO().nhaychuong(idTruyen, soChuong);
             var model = new TruyenDAO().xemchuong(id);
             ViewBag.Truyen = new TruyenDAO().XemChiTietTruyen(model.id_Truyen);
             ViewBag.Chuongtruyen = new TruyenDAO().xuatchuong(model.id_Truyen);
+            ViewBag.Chuongcuoi = new TruyenDAO().xuatchuongcuoi(model.id_Truyen);
             return View(model);
         }
     }
