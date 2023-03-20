@@ -139,8 +139,10 @@
     <Compile Include="Context\Truyen.cs" />
     <Compile Include="Context\User.cs" />
     <Compile Include="Controllers\ChiTietTruyenController.cs" />
+    <Compile Include="Controllers\TacGiaController.cs" />
     <Compile Include="Controllers\TheLoaiController.cs" />
     <Compile Include="Controllers\TrangChuController.cs" />
+    <Compile Include="DAO\TacGiaDAO.cs" />
     <Compile Include="DAO\TheLoaiDAO.cs" />
     <Compile Include="DAO\TruyenDAO.cs" />
     <Compile Include="Global.asax.cs">
@@ -165,6 +167,7 @@
     <Content Include="Content\Site.css" />
     <Content Include="images\imgTruyen\ban-tien.jpg" />
     <Content Include="images\imgTruyen\co-chan-nhan.jpg" />
+    <Content Include="images\imgTruyen\dai-quoc-tac.jpg" />
     <Content Include="images\imgTruyen\dao-mo-but-ky.jpg" />
     <Content Include="images\imgTruyen\de-yen.jpg" />
     <Content Include="images\imgTruyen\di-gioi-vo-dich-he-thong.jpg" />
@@ -221,6 +224,7 @@
     <Content Include="Views\ChiTietTruyen\Index.cshtml" />
     <Content Include="Views\ChiTietTruyen\DocTruyen.cshtml" />
     <Content Include="Views\TheLoai\Index.cshtml" />
+    <Content Include="Views\TacGia\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

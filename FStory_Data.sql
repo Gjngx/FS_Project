@@ -14922,3 +14922,7 @@ INSERT INTO ChuongTruyen VALUES(N'Chương 3', 'chuong-3', N'<p>Đường Tuyế
 --bat dau truyen 23 line 13273
 --bat dau truyen 24 line 13735
 --bat dau truyen 25 line 14403
+
+Select *
+from TheLoai,Truyen 
+Where TheLoai.id_TheLoai = Truyen.id_TheLoai and TheLoai.TenTheLoai = N'Huyền Ảo'

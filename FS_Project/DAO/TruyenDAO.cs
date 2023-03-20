@@ -13,6 +13,11 @@ namespace FS_Project.DAO
     {
         DbModel db = new DbModel();
 
+        public List<Truyen> DSTruyenTheoTacGia(int id)
+        {
+            return db.Truyens.Where(x => x.id_TacGia == id).ToList();
+        }
+
         public List<Truyen> DSTruyenTheoTheLoai(int id)
         {
             return db.Truyens.Where(x => x.id_TheLoai == id).ToList();
@@ -52,6 +57,8 @@ namespace FS_Project.DAO
             var Detail = new ViewTruyen()
             {
                 ID = truyen.id_Truyen,
+                idTheLoai = truyen.id_TheLoai,
+                idTacGia = truyen.id_TacGia,
                 tentruyen = truyen.TenTruyen,
                 tieude = truyen.TieuDe,
                 tentacgia = truyen.TacGia.TenTacGia,
@@ -63,7 +70,11 @@ namespace FS_Project.DAO
             };
             return Detail;
         }
-        public List<Truyen> truyenmoi(int count)
+        public List<Truyen> truyenmoi()
+        {
+            return db.Truyens.OrderByDescending(t => t.NgayDang).ToList();
+        }
+        public List<Truyen> truyentheosoluong(int count)
         {
             return db.Truyens.OrderByDescending(t => t.NgayDang).Take(count).ToList();
         }

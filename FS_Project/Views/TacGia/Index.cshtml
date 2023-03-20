@@ -2,13 +2,14 @@
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var theloai = (FS_Project.Context.TheLoai)ViewBag.TheLoai;
+    var tacgia = (FS_Project.Context.TacGia)ViewBag.TacGia;
 }
+
 <link rel="stylesheet" href="~/Content/Style-TheLoai.css">
 <div class="body" style="margin: 60px 70px;">
     <div class="doctruyen">
         <div class="tentheloai">
-            <h2>Thể Loại: @theloai.TenTheLoai</h2>
+            <h2>Thể Loại: @tacgia.TenTacGia</h2>
         </div>
         <li class="danhsach">
             @foreach (var tl in Model)

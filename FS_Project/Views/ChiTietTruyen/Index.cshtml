@@ -26,12 +26,12 @@
                     <div class="info">
                         <div>
                             <h3>Tác giả:</h3>
-                            <a itemprop="author" href="#"
+                            <a itemprop="author" href="@Url.Action("Index","TacGia", new {id = Model.idTacGia})"
                                title="@Model.tentacgia">@Model.tentacgia</a>
                         </div>
                         <div>
                             <h3>Thể loại:</h3>
-                            <a itemprop="genre" href="#" title="@Model.tentheloai">@Model.tentheloai</a>
+                            <a itemprop="genre" href="@Url.Action("Index","TheLoai", new {id = Model.idTheLoai})" title="@Model.tentheloai">@Model.tentheloai</a>
                         </div>
                         <div>
                             <h3>Trạng thái:</h3>

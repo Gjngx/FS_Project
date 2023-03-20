@@ -8,6 +8,8 @@ namespace FS_Project.Models
     public class ViewTruyen
     {
         public long ID { set; get; }
+        public int? idTheLoai { set; get; }
+        public int? idTacGia { set; get; }
         public string tentruyen { set; get; }
         public string tieude { set; get; }
         public string anhtruyen { set; get; }

@@ -39,8 +39,11 @@
     }
 
     .item img {
+        display: block;
+        max-width: 230px;
+        max-height: 95px;
+        width: auto;
         height: auto;
-        width: 30%;
         border-radius: 4px;
     }
 
@@ -54,7 +57,7 @@
         margin: 0;
         padding: 5%;
         height: auto;
-        width: fit-content;
+        width: max-content;
     }
 
     .tieude h4 {
@@ -63,5 +66,5 @@
         margin: 0;
         padding: 5%;
         height: auto;
-        width: fit-content;
+        width: max-content;
     }

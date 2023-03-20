@@ -15,7 +15,7 @@ namespace FS_Project.Controllers
         public ActionResult Index()
         {
             var dao = new TruyenDAO();
-            ViewBag.truyenmoi = dao.truyenmoi(20);
+            ViewBag.truyenmoi = dao.truyenmoi();
             ViewBag.truyennoibat = dao.DSTruyenNoiBat(5);
             ViewBag.DSTheLoai = new TheLoaiDAO().DSTheLoai();
             return View();
