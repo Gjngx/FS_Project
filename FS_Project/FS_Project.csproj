@@ -139,6 +139,7 @@
     <Compile Include="Context\Truyen.cs" />
     <Compile Include="Context\User.cs" />
     <Compile Include="Controllers\ChiTietTruyenController.cs" />
+    <Compile Include="Controllers\TheLoaiController.cs" />
     <Compile Include="Controllers\TrangChuController.cs" />
     <Compile Include="DAO\TheLoaiDAO.cs" />
     <Compile Include="DAO\TruyenDAO.cs" />
@@ -154,6 +155,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Style-TheLoai.css" />
     <Content Include="Content\StyleFS-ChiTietTruyen.css" />
     <Content Include="Content\StyleFS-DocTruyen.css" />
     <Content Include="Content\StyleFS-TrangChu.css" />
@@ -218,6 +220,7 @@
     <Content Include="Views\TrangChu\Index.cshtml" />
     <Content Include="Views\ChiTietTruyen\Index.cshtml" />
     <Content Include="Views\ChiTietTruyen\DocTruyen.cshtml" />
+    <Content Include="Views\TheLoai\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

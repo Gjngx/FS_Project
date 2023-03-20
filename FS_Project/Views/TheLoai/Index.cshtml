@@ -1,0 +1,29 @@
+﻿@model List<FS_Project.Context.Truyen>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var theloai = (FS_Project.Context.TheLoai)ViewBag.ChiTietTheLoai;
+}
+<link rel="stylesheet" href="~/Content/Style-TheLoai.css">
+<div class="body" style="margin: 60px 70px;">
+    <div class="doctruyen">
+        <div class="tentheloai">
+           
+        </div>
+        <li class="danhsach">
+            @foreach (var tl in Model)
+            {
+                <div class="item">
+                    <a href="@Url.Action("Index","ChiTietTruyen", new {id = tl.id_Truyen})">
+                        <img src="~/images/imgTruyen/@tl.AnhTruyen" alt="@tl.TenTruyen">
+                        <div class="tieude">
+                            <h3>@tl.TenTruyen</h3>
+                            <h4>Lượt Xem: @tl.LuotXem</h4>
+                        </div>
+                    </a>
+                </div>
+            }
+        </li>
+    </div>
+</div>
+

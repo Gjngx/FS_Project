@@ -13,6 +13,11 @@ namespace FS_Project.DAO
     {
         DbModel db = new DbModel();
 
+        public List<Truyen> DSTruyenTheoTheLoai(int id)
+        {
+            return db.Truyens.Where(x => x.id_TheLoai == id).ToList();
+        }
+
         public int? xuatchuongcuoi(long? id)
         {
             return db.ChuongTruyens.Where(x => x.id_Truyen == id).Max(x => x.SoChuong);

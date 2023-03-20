@@ -1,0 +1,152 @@
+*{
+    font-family: 'Nunito', sans-serif;
+}
+.container{
+    position: fixed;
+    height: 50px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}
+.navbar{
+    display: flex;
+    height: 100%;
+    background: white;
+}
+.navbar .logo{
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+    .navbar .logo img{
+        width: 180px;
+    }
+.navbar .search{
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+    .navbar .search img{
+        width: 25px;
+    }
+
+.navbar .account{
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+    .navbar .account img{
+        width: 25px;
+    }
+.navbar .menu{
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+    .navbar .menu img{
+        width: 25px;
+    }
+
+
+    
+.doctruyen{
+    display: block;
+    background-color: white;
+    border-radius: 5px;
+    padding: 1% 3%;
+}
+
+.danhsach{
+    display: grid;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
+}
+
+.tentheloai{
+    padding: 0;
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.tentheloai h2{
+    padding: 1%;
+    font-size: 150%;
+    border-bottom: 1px solid #000;
+    width: fit-content;
+    margin: 0;
+}
+
+.item{
+    display: inline-block;
+    padding: 1%;
+    border-bottom: 1px solid #EAEAEA;
+    
+}
+.item a{
+    display: inline-flex;
+    color: #000;
+    background-color: transparent;
+    text-decoration: none;
+}
+.item img{
+    height: auto;
+    width: 30%;
+    border-radius: 4px;
+}
+.tieude{
+    height: auto;
+    width: -webkit-fill-available;
+}
+.tieude h3 {
+    font-size: 100%;
+    margin: 0;
+    padding: 5%;
+    height: auto;
+    width: fit-content;
+}
+.tieude h4 {
+    font-size: 80%;
+    font-weight: 200;
+    margin: 0;
+    padding: 5%;
+    height: auto;
+    width: fit-content;
+}
+.footer{
+    color: white;
+    background-color:rgb(40, 34, 34);
+    padding:10px;
+    margin: 0px -7.7888888px -7.8888px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0px, 1fr));
+    left: 0;
+    bottom: 0;
+}
+    .b1{
+        font-size: 20px;
+        text-align: center;
+    }
+    .b2{
+        text-align: center;
+    }
+    .b2 img {
+        width: 400px;
+        padding-right: 20px;
+    }
+    .b3{
+        text-align: center;
+    }

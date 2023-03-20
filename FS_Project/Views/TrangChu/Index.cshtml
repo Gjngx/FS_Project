@@ -57,7 +57,7 @@
                 @foreach (var tl in DSTheLoai)
                 {
                     <div class="col-theloai">
-                        <a class="" href="#" title="Truyện @tl.TenTheLoai">@tl.TenTheLoai</a>
+                        <a class="" href="@Url.Action("Index","TheLoai", new {id = tl.id_TheLoai})" title="Truyện @tl.TenTheLoai">@tl.TenTheLoai</a>
                     </div>
                 }
             </div>
