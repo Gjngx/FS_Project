@@ -1,0 +1,35 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var truyenmoi = (List<FS_Project.Context.Truyen>)ViewBag.truyenmoi;
+}
+
+<link rel="stylesheet" href="~/Content/Style-TimTacGia.css">
+<div class="body" style="margin: 60px 70px;">
+    <div class="doctruyen">
+        <div class="tentheloai">
+            <h2>Tìm kiếm truyện</h2>
+        </div>
+        <div class="find">
+            <input type="search" class="otimkiem">
+            <input type="button" value="Tìm truyện" class="button">
+        </div>
+        <li class="danhsach">
+            @foreach (var t in truyenmoi)
+            {
+                <div class="item">
+                    <a href="@Url.Action("Index","ChiTietTruyen", new {id = t.id_Truyen})">
+                        <img src="~/images/imgTruyen/@t.AnhTruyen" alt="@t.TenTruyen">
+                        <div class="tieude">
+                            <h3>@t.TenTruyen</h3>
+                            <h4>Lượt Xem: @t.LuotXem</h4>
+                        </div>
+                    </a>
+                </div>
+            }
+        </li>
+    </div>
+</div>
+
+

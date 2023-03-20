@@ -141,6 +141,7 @@
     <Compile Include="Controllers\ChiTietTruyenController.cs" />
     <Compile Include="Controllers\TacGiaController.cs" />
     <Compile Include="Controllers\TheLoaiController.cs" />
+    <Compile Include="Controllers\TimKiemController.cs" />
     <Compile Include="Controllers\TrangChuController.cs" />
     <Compile Include="DAO\TacGiaDAO.cs" />
     <Compile Include="DAO\TheLoaiDAO.cs" />
@@ -158,6 +159,7 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Style-TheLoai.css" />
+    <Content Include="Content\Style-TimTacGia.css" />
     <Content Include="Content\StyleFS-ChiTietTruyen.css" />
     <Content Include="Content\StyleFS-DocTruyen.css" />
     <Content Include="Content\StyleFS-TrangChu.css" />
@@ -225,6 +227,9 @@
     <Content Include="Views\ChiTietTruyen\DocTruyen.cshtml" />
     <Content Include="Views\TheLoai\Index.cshtml" />
     <Content Include="Views\TacGia\Index.cshtml" />
+    <Content Include="Views\TimKiem\Index.cshtml" />
+    <Content Include="Views\TimKiem\timtacgia.cshtml" />
+    <Content Include="Views\TimKiem\timtheloai.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
