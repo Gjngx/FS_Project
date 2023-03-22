@@ -1,4 +1,5 @@
-﻿using FS_Project.DAO;
+﻿using FS_Project.Context;
+using FS_Project.DAO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,11 +11,19 @@ namespace FS_Project.Controllers
     public class TimKiemController : Controller
     {
         // GET: TimKiem
-        public ActionResult Index()
+        DbModel db = new DbModel();
+
+        public ActionResult Index(string timkiemstring)
         {
             ViewBag.truyenmoi = new TruyenDAO().truyentheosoluong(10);
-            return View();
+            var truyen = from t in db.Truyens select t;
+            if (!String.IsNullOrEmpty(timkiemstring))
+            {
+                truyen = truyen.Where(s => s.TenTruyen.Contains(timkiemstring));
+            }
+            return View(truyen);
         }
+
 
         public ActionResult timtacgia() 
         {

@@ -11,10 +11,13 @@
         <div class="tentheloai">
             <h2>Tìm kiếm truyện</h2>
         </div>
-        <div class="find">
-            <input type="search" class="otimkiem">
-            <input type="button" value="Tìm truyện" class="button">
-        </div>
+        @using (Html.BeginForm("Index", "TimKiem", FormMethod.Get))
+        {
+            <div class="find">
+                <input type="search" class="otimkiem" name="timkiemstring">
+                <input type="button" value="Tìm truyện" class="button">
+            </div>
+        }
         <li class="danhsach">
             @foreach (var t in truyenmoi)
             {

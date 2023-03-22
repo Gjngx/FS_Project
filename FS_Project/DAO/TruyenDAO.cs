@@ -13,6 +13,7 @@ namespace FS_Project.DAO
     {
         DbModel db = new DbModel();
 
+
         public List<Truyen> DSTruyenTheoTacGia(int id)
         {
             return db.Truyens.Where(x => x.id_TacGia == id).ToList();
