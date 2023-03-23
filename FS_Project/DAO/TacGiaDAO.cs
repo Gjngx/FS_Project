@@ -13,5 +13,11 @@ namespace FS_Project.DAO
         {
             return db.TacGias.Find(id);
         }
+
+        public List<TacGia> GetTacGia()
+        {
+            var list = db.Database.SqlQuery<TacGia>("GetTacGia").ToList();
+            return list;
+        }
     }
 }

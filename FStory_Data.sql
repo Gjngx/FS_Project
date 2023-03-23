@@ -14922,7 +14922,37 @@ INSERT INTO ChuongTruyen VALUES(N'Chương 3', 'chuong-3', N'<p>Đường Tuyế
 --bat dau truyen 23 line 13273
 --bat dau truyen 24 line 13735
 --bat dau truyen 25 line 14403
-
+go
 Select *
 from TheLoai,Truyen 
 Where TheLoai.id_TheLoai = Truyen.id_TheLoai and TheLoai.TenTheLoai = N'Huyền Ảo'
+
+go
+create proc GetTacGia
+as
+select * from dbo.TacGia
+go
+create proc GetTheLoai
+as
+select * from dbo.TheLoai
+go
+--create proc CountTheLoai
+--@IdTheLoai int 
+--as
+--select count(*) from dbo.TheLoai, dbo.Truyen where TheLoai.id_TheLoai = @IdTheLoai and TheLoai.id_TheLoai = Truyen.id_TheLoai 
+
+--exec CountTheLoai 1
+
+
+create proc GetTruyen
+as
+select * from dbo.Truyen
+go
+create proc GetAdmin
+as
+select * from dbo.Admins
+go
+create proc GetUser
+as
+select * from dbo.Users
+

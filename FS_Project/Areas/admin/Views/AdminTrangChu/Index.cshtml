@@ -1,51 +1,87 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "Index";
     Layout = "~/Areas/admin/Views/Shared/_Layout_Admin.cshtml";
 }
 
-<div class="container-fluid px-4">
-    <h1 class="mt-4">Trang chủ</h1>
-    <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Quản lý</li>
-    </ol>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+        <h1 class="h3 mb-0 text-gray-800">Trang chủ</h1>
+    </div>
+
+    <!-- Content Row -->
     <div class="row">
-        <div class="col-xl-3 col-md-6">
-            <div class="card bg-primary text-white mb-4">
-                <div class="card-body">Thể loại</div>
-                <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="#">Xem chi tiết</a>
-                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <a href="/admin/TacGia/Index" style="text-decoration: none;">
+                <div class="card border-left-primary shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
+                                    Tác giả
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">12</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-user fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="card bg-warning text-white mb-4">
-                <div class="card-body">Tác giả</div>
-                <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="#">Xem chi tiết</a>
-                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <a href="/admin/TheLoai/Index" style="text-decoration: none;">
+                <div class="card border-left-success shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
+                                    Thể loại
+                                </div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">14</div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-bookmark fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </a>
         </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="card bg-success text-white mb-4">
-                <div class="card-body">Truyện</div>
-                <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="#">Xem chi tiết</a>
-                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+
+        <!-- Earnings (Monthly) Card Example -->
+        <div class="col-xl-3 col-md-6 mb-4">
+            <a href="#" style="text-decoration: none;">
+                <div class="card border-left-info shadow h-100 py-2">
+                    <div class="card-body">
+                        <div class="row no-gutters align-items-center">
+                            <div class="col mr-2">
+                                <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
+                                    Truyện
+                                </div>
+                                <div class="row no-gutters align-items-center">
+                                    <div class="col-auto">
+                                        <div class="h5 mb-0 mr-3 font-weight-bold text-gray-800">
+                                            30
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-auto">
+                                <i class="fas fa-book fa-2x text-gray-300"></i>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </div>
-        <div class="col-xl-3 col-md-6">
-            <div class="card bg-danger text-white mb-4">
-                <div class="card-body">Chương truyện</div>
-                <div class="card-footer d-flex align-items-center justify-content-between">
-                    <a class="small text-white stretched-link" href="#">Xem chi tiết</a>
-                    <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                </div>
-            </div>
+            </a>
         </div>
     </div>
 </div>
-
+<!-- /.container-fluid -->

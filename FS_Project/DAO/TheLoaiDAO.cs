@@ -19,7 +19,13 @@ namespace FS_Project.DAO
         {
             return db.TheLoais.OrderBy(x => x.id_TheLoai).ToList();
         }
-        
+        public List<TheLoai> GetTheLoai()
+        {
+            var list = db.Database.SqlQuery<TheLoai>("GetTheLoai").ToList();
+            return list;
+        }
+
+
     }
     
 }

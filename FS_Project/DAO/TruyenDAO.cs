@@ -13,6 +13,11 @@ namespace FS_Project.DAO
     {
         DbModel db = new DbModel();
 
+        public List<Truyen> GetTruyen()
+        {
+            var list = db.Database.SqlQuery<Truyen>("GetTruyen").ToList();
+            return list;
+        }
 
         public List<Truyen> DSTruyenTheoTacGia(int id)
         {
