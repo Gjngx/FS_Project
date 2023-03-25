@@ -59,6 +59,40 @@ namespace FS_Project.Areas.admin.Controllers
 
             }
         }
+        [HttpGet]
+        public ActionResult CapNhatTruyen(int id)
+        {
+            var truyens = new TruyenDAO().ChiTietTruyen(id);
+            List<TacGia> tacGias = db.TacGias.ToList();
+            List<TheLoai> theLoais = db.TheLoais.ToList();
+            List<TrangThai> trangThais = db.TrangThais.ToList();
+            SelectList listtacgia = new SelectList(tacGias, "id_TacGia", "TenTacGia");
+            SelectList listtheloai = new SelectList(theLoais, "id_TheLoai", "TenTheLoai");
+            SelectList listtrangthai = new SelectList(trangThais, "id_TrangThai", "TrangThai1");
+            ViewBag.dstacgia = listtacgia;
+            ViewBag.dstheloai = listtheloai;
+            ViewBag.dstrangthai = listtrangthai;
+            return View(truyens);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CapNhatTruyen(int id , Truyen truyen)
+        {
+            if (ModelState.IsValid)
+            {
+                var kqua = new TruyenDAO().UpdateTruyen(id,truyen);
+                if(kqua)
+                {
+                    return RedirectToAction("Index", "Truyen");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Cập nhật thất bại!");
+                }
+            }
+            return View("Index");
+        }
 
         public ActionResult ChuongTruyen(int id)
         {

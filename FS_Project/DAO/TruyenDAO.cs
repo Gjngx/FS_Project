@@ -14,6 +14,33 @@ namespace FS_Project.DAO
     {
         DbModel db = new DbModel();
 
+
+        public bool UpdateTruyen( int id,Truyen t)
+        {
+            try
+            {
+                var truyen = db.Truyens.Find(id);
+                truyen.id_TacGia = t.id_TacGia;
+                truyen.id_TheLoai = t.id_TheLoai;
+                truyen.id_TrangThai = t.id_TrangThai;
+                truyen.TenTruyen = t.TenTruyen;
+                truyen.TieuDe = t.TieuDe ;
+                truyen.AnhTruyen = t.AnhTruyen;
+                truyen.GioiThieu = t.GioiThieu;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public Truyen ChiTietTruyen(int id)
+        {
+            return db.Truyens.Find(id);
+        }
+
         public int InsertTruyen(int? idtacgia, int? idtheloai, int? idtrangthai, string tentruyen, string tieude, string anhtruyen, string gioithieu)
         {
             object[] data =

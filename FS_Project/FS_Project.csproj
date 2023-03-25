@@ -224,6 +224,7 @@
     <Content Include="Areas\admin\Views\Truyen\Index.cshtml" />
     <Content Include="Areas\admin\Views\Truyen\ChuongTruyen.cshtml" />
     <Content Include="Areas\admin\Views\Truyen\ThemTruyen.cshtml" />
+    <Content Include="Areas\admin\Views\Truyen\CapNhatTruyen.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\chart-area-demo.js" />
     <Content Include="Scripts\chart-pie-demo.js" />
