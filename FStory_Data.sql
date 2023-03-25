@@ -14956,3 +14956,5 @@ create proc GetUser
 as
 select * from dbo.Users
 
+select * from dbo.TrangThai
+

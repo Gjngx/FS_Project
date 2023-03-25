@@ -1,8 +1,57 @@
-﻿
+﻿@model List<FS_Project.Models.ViewTruyen>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Areas/admin/Views/Shared/_Layout_Admin.cshtml";
 }
 
-<h2>Index</h2>
+<!-- Begin Page Content -->
+<div class="container-fluid">
 
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Truyện</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Danh sách truyện</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Tên truyện</th>
+                            <th>Tóm tắt</th>
+                            <th>Thể loại</th>
+                            <th>Tác giả</th>
+                            <th>Trạng thái</th>
+                            <th>Chương truyện</th>
+                            <th>Thêm</th>
+                            <th>Sửa</th>
+                            <th>Xóa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var t in Model)
+                        {
+                            <tr>
+                                <td>@t.ID</td>
+                                <td>@t.tentruyen</td>
+                                <td>@t.tomtat</td>
+                                <td>@t.tentheloai</td>
+                                <td>@t.tentacgia</td>
+                                <td>@t.trangthai</td>
+                                <td><a href="/admin/Truyen/ChuongTruyen/@t.ID"><i class="fas fa-info-circle"></i></a></td>
+                                <td><a href="/admin/Truyen/NewTruyen"><i class="fa-solid fa-circle-plus"></i></a></td>
+                                <td><a href="#"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                                <td><a href="#"><i style="color: red" class="fa-solid fa-trash-can"></i></a></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /.container-fluid -->

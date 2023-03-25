@@ -13,10 +13,69 @@ namespace FS_Project.DAO
     {
         DbModel db = new DbModel();
 
-        public List<Truyen> GetTruyen()
+        public bool ktratruyen(string tentruyen)
         {
-            var list = db.Database.SqlQuery<Truyen>("GetTruyen").ToList();
-            return list;
+            return db.Truyens.Count(x => x.TenTruyen == tentruyen) > 0;
+        }
+        public long ThemTruyen(Truyen truyen, string tacgia, string theloai, string trangthai)
+        {
+            //check status author and category
+            var tacgiadao = new TacGiaDAO();
+            var theloaidao = new TheLoaiDAO();
+            var trangthaidao = new TrangThaiDAO();
+            if (tacgiadao.ktratacgia(tacgia) == false)
+            {
+                var tacGia = new TacGia();
+                tacGia.TenTacGia = tacgia;
+                db.TacGias.Add(tacGia);
+                db.SaveChanges();
+            }
+
+            if (theloaidao.Ktratheloai(theloai) == false)
+            {
+                var theLoai = new TheLoai();
+                theLoai.TenTheLoai = theloai;
+                db.TheLoais.Add(theLoai);
+                db.SaveChanges();
+            }
+
+            //add story
+            truyen.id_TacGia = tacgiadao.GetIdByName(tacgia);
+            truyen.id_TheLoai = theloaidao.GetIdByName(theloai);
+            truyen.id_TrangThai = trangthaidao.GetIdByName(trangthai);
+            truyen.NgayDang = DateTime.Now;
+            db.Truyens.Add(truyen);
+            db.SaveChanges();
+            return truyen.id_Truyen;
+        }
+
+        public List<ChuongTruyen> GetChuongTruyenById(long? id_story)
+        {
+            return db.ChuongTruyens.Where(x => x.id_Truyen == id_story).OrderBy(x => x.SoChuong).ToList();
+        }
+
+        public List<ViewTruyen> GetTruyen()
+        {
+            var model = from a in db.Truyens
+                        join b in db.TacGias
+                        on a.id_TacGia equals b.id_TacGia
+                        join c in db.TheLoais
+                        on a.id_TheLoai equals c.id_TheLoai
+                        join d in db.TrangThais
+                        on a.id_TrangThai equals d.id_TrangThai
+                        where a.id_Truyen >= 0
+                        select new ViewTruyen()
+                        {
+                            ID = a.id_Truyen,
+                            tentruyen = a.TenTruyen,
+                            tentacgia = b.TenTacGia,
+                            tentheloai = c.TenTheLoai,
+                            tomtat = a.GioiThieu,
+                            trangthai = d.TrangThai1,
+                            anhtruyen = a.AnhTruyen,
+                            tieude = a.TieuDe
+                        };
+            return model.ToList();
         }
 
         public List<Truyen> DSTruyenTheoTacGia(int id)

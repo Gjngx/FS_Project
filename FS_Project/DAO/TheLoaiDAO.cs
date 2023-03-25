@@ -10,6 +10,16 @@ namespace FS_Project.DAO
     {
         DbModel db = new DbModel();
 
+        public int? GetIdByName(string name)
+        {
+            return db.TheLoais.SingleOrDefault(x => x.TenTheLoai == name).id_TheLoai;
+        }
+
+        public bool Ktratheloai(string name)
+        {
+            return db.TheLoais.Count(x => x.TenTheLoai == name) > 0;
+        }
+
         public TheLoai ChiTietTheLoai(int id)
         {
             return db.TheLoais.Find(id);

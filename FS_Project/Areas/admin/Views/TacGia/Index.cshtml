@@ -23,29 +23,17 @@
                         <tr>
                             <th>Id</th>
                             <th>Tên tác giả</th>
-                            <th>Tiêu dề</th>
                             <th>Thêm</th>
                             <th>Sửa</th>
                             <th>Xóa</th>
                         </tr>
                     </thead>
-                    <tfoot>
-                        <tr>
-                            <th>Id</th>
-                            <th>Tên tác giả</th>
-                            <th>Tiêu dề</th>
-                            <th>Thêm</th>
-                            <th>Sửa</th>
-                            <th>Xóa</th>
-                        </tr>
-                    </tfoot>
                     <tbody>
                         @foreach (var tg in Model)
                         {
                             <tr>
                                 <td>@tg.id_TacGia</td>
                                 <td>@tg.TenTacGia</td>
-                                <td>@tg.TieuDe</td>
                                 <td><a href="#"><i class="fa-solid fa-circle-plus"></i></a></td>
                                 <td><a href="#"><i class="fa-regular fa-pen-to-square"></i></a></td>
                                 <td><a href="#"><i style="color: red" class="fa-solid fa-trash-can"></i></a></td>

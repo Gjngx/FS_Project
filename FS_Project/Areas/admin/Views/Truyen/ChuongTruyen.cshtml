@@ -1,39 +1,40 @@
-﻿@model List<FS_Project.Context.TheLoai>
+﻿@model List<FS_Project.Context.ChuongTruyen>
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "ChuongTruyen";
     Layout = "~/Areas/admin/Views/Shared/_Layout_Admin.cshtml";
-    var count = ViewBag.Model;
 }
 
 <!-- Begin Page Content -->
 <div class="container-fluid">
 
     <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Thể loại</h1>
+    <h1 class="h3 mb-2 text-gray-800">Chương truyện</h1>
 
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
-            <h6 class="m-0 font-weight-bold text-primary">Danh sách thể loại</h6>
+            <h6 class="m-0 font-weight-bold text-primary">Danh sách chương</h6>
         </div>
         <div class="card-body">
             <div class="table-responsive">
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
-                            <th>Id</th>
-                            <th>Tên Thể Loại</th>
+                            <th>Tên truyện</th>
+                            <th>Tên Chương</th>
+                            <th>Nội Dung</th>
                             <th>Thêm</th>
                             <th>Sửa</th>
                             <th>Xóa</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach (var tl in Model)
+                        @foreach (var ct in Model)
                         {
                             <tr>
-                                <td>@tl.id_TheLoai</td>
-                                <td>@tl.TenTheLoai</td>
+                                <td>@ct.Truyen.TenTruyen</td>
+                                <td>@ct.TenChuong</td>
+                                <td>@ct.NoiDungChu</td>
                                 <td><a href="#"><i class="fa-solid fa-circle-plus"></i></a></td>
                                 <td><a href="#"><i class="fa-regular fa-pen-to-square"></i></a></td>
                                 <td><a href="#"><i style="color: red" class="fa-solid fa-trash-can"></i></a></td>

@@ -9,6 +9,17 @@ namespace FS_Project.DAO
     public class TacGiaDAO
     {
         DbModel db = new DbModel();
+
+        public int? GetIdByName(string name)
+        {
+            return db.TacGias.SingleOrDefault(x => x.TenTacGia == name).id_TacGia;
+        }
+
+        public bool ktratacgia(string name)
+        {
+            return db.TacGias.Count(x => x.TenTacGia == name) > 0;
+        }
+
         public TacGia ChiTietTacGia(int id)
         {
             return db.TacGias.Find(id);
