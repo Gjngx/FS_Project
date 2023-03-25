@@ -3,6 +3,7 @@ using FS_Project.Models;
 using System;
 using System.Collections.Generic;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI.WebControls;
@@ -13,40 +14,20 @@ namespace FS_Project.DAO
     {
         DbModel db = new DbModel();
 
-        public bool ktratruyen(string tentruyen)
+        public int InsertTruyen(int? idtacgia, int? idtheloai, int? idtrangthai, string tentruyen, string tieude, string anhtruyen, string gioithieu)
         {
-            return db.Truyens.Count(x => x.TenTruyen == tentruyen) > 0;
-        }
-        public long ThemTruyen(Truyen truyen, string tacgia, string theloai, string trangthai)
-        {
-            //check status author and category
-            var tacgiadao = new TacGiaDAO();
-            var theloaidao = new TheLoaiDAO();
-            var trangthaidao = new TrangThaiDAO();
-            if (tacgiadao.ktratacgia(tacgia) == false)
+            object[] data =
             {
-                var tacGia = new TacGia();
-                tacGia.TenTacGia = tacgia;
-                db.TacGias.Add(tacGia);
-                db.SaveChanges();
-            }
-
-            if (theloaidao.Ktratheloai(theloai) == false)
-            {
-                var theLoai = new TheLoai();
-                theLoai.TenTheLoai = theloai;
-                db.TheLoais.Add(theLoai);
-                db.SaveChanges();
-            }
-
-            //add story
-            truyen.id_TacGia = tacgiadao.GetIdByName(tacgia);
-            truyen.id_TheLoai = theloaidao.GetIdByName(theloai);
-            truyen.id_TrangThai = trangthaidao.GetIdByName(trangthai);
-            truyen.NgayDang = DateTime.Now;
-            db.Truyens.Add(truyen);
-            db.SaveChanges();
-            return truyen.id_Truyen;
+                new SqlParameter("@IdTacGia", idtacgia),
+                new SqlParameter("@IdTheLoai", idtheloai),
+                new SqlParameter("@IdTrangThai", idtrangthai),
+                new SqlParameter("@tentruyen", tentruyen),
+                new SqlParameter("@tieude", tieude),
+                new SqlParameter("@anhtruyen", anhtruyen),
+                new SqlParameter("@gioithieu", gioithieu)
+            };
+            int res = db.Database.ExecuteSqlCommand("InsertTruyen @IdTacGia, @IdTheLoai, @IdTrangThai, @tentruyen, @tieude, @anhtruyen, @gioithieu", data);
+            return res;
         }
 
         public List<ChuongTruyen> GetChuongTruyenById(long? id_story)

@@ -15,6 +15,9 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Danh sách tác giả</h6>
+            <a style="text-decoration: none" href="#">
+                <h6 style=" padding: 1%;">Thêm tác giả <i class="fa-solid fa-circle-plus"></i></h6>
+            </a>
         </div>
         <div class="card-body">
             <div class="table-responsive">
@@ -23,7 +26,6 @@
                         <tr>
                             <th>Id</th>
                             <th>Tên tác giả</th>
-                            <th>Thêm</th>
                             <th>Sửa</th>
                             <th>Xóa</th>
                         </tr>
@@ -34,7 +36,6 @@
                             <tr>
                                 <td>@tg.id_TacGia</td>
                                 <td>@tg.TenTacGia</td>
-                                <td><a href="#"><i class="fa-solid fa-circle-plus"></i></a></td>
                                 <td><a href="#"><i class="fa-regular fa-pen-to-square"></i></a></td>
                                 <td><a href="#"><i style="color: red" class="fa-solid fa-trash-can"></i></a></td>
                             </tr>

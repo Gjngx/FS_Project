@@ -1,0 +1,31 @@
+﻿.tieude h2 {
+    text-align: center;
+}
+
+.col-md-10 {
+    margin-right: 0;
+    margin-left: 8%;
+}
+
+.col-md-2 {
+    margin-right: 0;
+    margin-left: 8%;
+}
+
+.combox {
+    display: grid;
+    grid-template-columns: [line]6%[form-group] 30% [form-group] 28% [form-group] 30% [line] 6%;
+}
+
+.comboxtieude {
+    display: inline;
+}
+
+.groupTieudeAnhtruyen {
+    display: grid;
+    grid-template-columns: [line]5% [form-group] 45% [form-group] 45% [line] 5%;
+}
+
+.btn-them {
+    text-align: center;
+}

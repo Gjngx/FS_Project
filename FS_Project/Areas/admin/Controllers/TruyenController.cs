@@ -35,9 +35,29 @@ namespace FS_Project.Areas.admin.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult ThemTruyen(Truyen model)
+        [ValidateAntiForgeryToken]
+        public ActionResult ThemTruyen(Truyen truyens)
         {
-            return View("ThemTruyen");
+            try
+            {
+                if(ModelState.IsValid)
+                {
+                    var model = new TruyenDAO();
+                    int res = model.InsertTruyen(truyens.id_TacGia, truyens.id_TheLoai, truyens.id_TrangThai, truyens.TenTruyen, truyens.TieuDe, truyens.AnhTruyen, truyens.GioiThieu);
+                    if (res > 0)
+                        return RedirectToAction("Index");
+                    else
+                    {
+                        ModelState.AddModelError("", "Thêm mới thất bại!");
+                    }
+                }
+                return View(truyens);
+            }
+            catch
+            {
+                return View();
+
+            }
         }
 
         public ActionResult ChuongTruyen(int id)

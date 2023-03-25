@@ -161,7 +161,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Truyen_TacGia.cs" />
     <Compile Include="Models\ViewTruyen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -178,6 +177,7 @@
     <Content Include="Content\StyleFS-ChiTietTruyen.css" />
     <Content Include="Content\StyleFS-DocTruyen.css" />
     <Content Include="Content\StyleFS-TrangChu.css" />
+    <Content Include="Content\StyleThemTruyen.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

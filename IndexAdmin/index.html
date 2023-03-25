@@ -2,185 +2,331 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
-    <link href="/assets/admin/css/styles.css" rel="stylesheet" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"
-        crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Admin FStory</title>
+    <!-- Custom fonts for this template-->
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+    <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styleThemtruyen.css">
+    <link href="/Content/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+
+
 </head>
 
-<body>
-    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-        <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="/admin">Quản lý Website Truyện</a>
-        <!-- Sidebar Toggle-->
-        <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!"><i
-                class="fas fa-bars"></i></button>
-        <!-- Navbar Search-->
-        <form class="d-none d-md-inline-block form-inline ms-auto me-0 me-md-3 my-2 my-md-0">
-            <div class="input-group">
-                <input class="form-control" type="text" placeholder="Tìm kiếm..." aria-label="Search for..."
-                    aria-describedby="btnNavbarSearch" />
-                <button class="btn btn-primary" id="btnNavbarSearch" type="button"><i
-                        class="fas fa-search"></i></button>
-            </div>
-        </form>
-        <!-- Navbar-->
-        <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
-                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                    <li><a class="dropdown-item" href="#!"></a></li>
-                    <li><a class="dropdown-item" href="#!"></a></li>
-                    <li>
-                        <hr class="dropdown-divider" />
-                    </li>
-                    <li><a class="dropdown-item" href="#!">Đăng xuất</a></li>
-                </ul>
+<body id="page-top">
+
+    <!-- Page Wrapper -->
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/admin/AdminTrangChu/Index">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-book"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Admin FStory</div>
+            </a>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Nav Item - Dashboard -->
+            <li class="nav-item active">
+                <a class="nav-link" href="/admin/AdminTrangChu/Index">
+                    <i class="fas fa-home"></i>
+                    <span>Trang chủ</span>
+                </a>
             </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Heading -->
+            <div class="sidebar-heading">
+                Quản lý
+            </div>
+
+            <!-- Nav Item - Pages Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
+                    aria-expanded="true" aria-controls="collapseTwo">
+                    <i class="fas fa-book-open"></i>
+                    <span>Truyện</span>
+                </a>
+                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Quản lý truyện:</h6>
+                        <a class="collapse-item" href="/admin/TacGia/Index">Tác giả</a>
+                        <a class="collapse-item" href="/admin/TheLoai/Index">Thể loại</a>
+                        <a class="collapse-item" href="/admin/Truyen/Index">Truyện</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Nav Item - Utilities Collapse Menu -->
+            <li class="nav-item">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                    aria-expanded="true" aria-controls="collapseUtilities">
+                    <i class="fas fa-user-alt"></i>
+                    <span>Tài khoản</span>
+                </a>
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div class="bg-white py-2 collapse-inner rounded">
+                        <h6 class="collapse-header">Quản lý tài khoản:</h6>
+                        <a class="collapse-item" href="#">User</a>
+                        <a class="collapse-item" href="#">Admin</a>
+                    </div>
+                </div>
+            </li>
+
+            <!-- Divider -->
+            <hr class="sidebar-divider">
+
+            <!-- Sidebar Toggler (Sidebar) -->
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+
         </ul>
-    </nav>
+        <!-- End of Sidebar -->
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
 
-    <div id="layoutSidenav">
-        <div id="layoutSidenav_nav">
-            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                <div class="sb-sidenav-menu">
+            <!-- Main Content -->
+            <div id="content">
 
-                    <div class="nav">
-                        <a class="nav-link" href="/Admin">
-                            <div class="sb-nav-link-icon"><i class="fas fa-home"></i></div>
-                            Trang chủ
-                        </a>
-                        <a class="nav-link" href="/Admin/User/Index">
-                            <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
-                            Người dùng
-                        </a>
-                        <a class="nav-link" href="/Admin/Author/Index">
-                            <div class="sb-nav-link-icon"><i class="fas fa-at"></i></div>
-                            Tác giả
-                        </a>
-                        <a class="nav-link" href="/Admin/Category/Index">
-                            <div class="sb-nav-link-icon"><i class="fas fa-bars"></i></div>
-                            Thể loại
-                        </a>
-                        <a class="nav-link" href="/Admin/Story/Index">
-                            <div class="sb-nav-link-icon"><i class="fas fa-file"></i></div>
-                            Quản lý truyện
-                        </a>
-                        <a class="nav-link" href="/Admin/Comment/Index">
-                            <div class="sb-nav-link-icon"><i class="fas fa-comment"></i></div>
-                            Bình luận
-                        </a>
-                    </div>
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
+
+                    <!-- Sidebar Toggle (Topbar) -->
+                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
+                        <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Topbar Navbar -->
+                    <ul class="navbar-nav ml-auto">
+
+                        <!-- Nav Item - Search Dropdown (Visible Only XS) -->
+                        <li class="nav-item dropdown no-arrow d-sm-none">
+                            <a class="nav-link dropdown-toggle" href="#" id="searchDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <i class="fas fa-search fa-fw"></i>
+                            </a>
+                            <!-- Dropdown - Messages -->
+                            <div class="dropdown-menu dropdown-menu-right p-3 shadow animated--grow-in"
+                                aria-labelledby="searchDropdown">
+                                <form class="form-inline mr-auto w-100 navbar-search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control bg-light border-0 small"
+                                            placeholder="Search for..." aria-label="Search"
+                                            aria-describedby="basic-addon2">
+                                        <div class="input-group-append">
+                                            <button class="btn btn-primary" type="button">
+                                                <i class="fas fa-search fa-sm"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </li>
+
+                        <div class="topbar-divider d-none d-sm-block"></div>
+
+                        <!-- Nav Item - User Information -->
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <img class="img-profile rounded-circle" src="img/undraw_profile.svg">
+                            </a>
+                            <!-- Dropdown - User Information -->
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+                                aria-labelledby="userDropdown">
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Profile
+                                </a>
+                                <a class="dropdown-item" href="#">
+                                    <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Settings
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
+                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                                    Logout
+                                </a>
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </nav>
+                <!-- End of Topbar -->
+
+                <div class="tieude">
+                    <h2>Thêm Truyện</h2>
                 </div>
-            </nav>
-        </div>
-        <div id="layoutSidenav_content">
-            <main>
+                
+                <form action="/admin/Truyen/ThemTruyen" method="post"><input name="__RequestVerificationToken"
+                        type="hidden"
+                        value="i6sPqUJeToS5l4ph5K2g0WDgACQmFUdpRwKzTHKtj_KXkzCR0kv4yJl1vhC5LFkHub_sDpCj-2kdKWgu5sTgXKAMYfivo40jkbeqz8r45xU1" />
+                    <div class="form-horizontal">
+                        <hr />
 
+                        <div class="form-group">
+                            <label class="control-label col-md-2" for="TenTruyen">T&#234;n truyện</label>
+                            <div class="col-md-10">
+                                <input class="form-control text-box single-line" data-val="true"
+                                    data-val-length="The field TenTruyen must be a string with a maximum length of 255."
+                                    data-val-length-max="255" id="TenTruyen" name="TenTruyen" type="text" value="" />
+                                <span class="field-validation-valid text-danger" data-valmsg-for="TenTruyen"
+                                    data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
+                    <div class="combox">
+                        <div class="line"></div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 comboxtieude" for="id_TacGia">T&#234;n t&#225;c giả</label>
+                            <div class="col-md-10">
+                                <select class="form-control" id="id_tacgia" name="id_tacgia">
+                                    <option value="1">Tiểu Tiểu B&#225;t</option>
+                                    <option value="2">Hồ Đồ Tiếu Tiếu</option>
+                                    <option value="3">Thập Nguyệt Lưu Ni&#234;n</option>
+                                    <option value="4">Mạc Hỏa Tiểu Mạt</option>
+                                    <option value="5">Hỏa Tiểu Huy&#234;n</option>
+                                    <option value="6">V&#226;n Ngoại Thi&#234;n Đ&#244;</option>
+                                </select>
+                                <span class="field-validation-valid text-danger" data-valmsg-for="id_TacGia"
+                                    data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
 
-                <head>
-                    <title>Trang chủ</title>
-                </head>
-                <main>
-                    <div class="container-fluid px-4">
-                        <h1 class="mt-4">Tổng quan</h1>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 comboxtieude" for="id_TheLoai">T&#234;n thể loại</label>
+                            <div class="col-md-10">
+                                <select class="form-control" data-val="true"
+                                    data-val-number="The field id_TheLoai must be a number." id="id_TheLoai"
+                                    name="id_TheLoai">
+                                    <option value="1">Huyền Ảo</option>
+                                    <option value="2">H&#224;i Hước</option>
+                                    <option value="3">Huyền Huyễn</option>
+                                    <option value="4">Lịch Sử</option>
+                                    <option value="5">Hệ Thống</option>
+                                    <option value="6">Dị Năng</option>
+                                    <option value="7">Trinh Th&#225;m</option>
+                                    <option value="8">Cổ Đại</option>
+                                    <option value="9">Kiếm Hiệp</option>
+                                </select>
+                                <span class="field-validation-valid text-danger" data-valmsg-for="id_TheLoai"
+                                    data-valmsg-replace="true"></span>
+                            </div>
+                        </div>
 
-                        <div class="row">
-                            <div class="col-xl-2 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Số tài khoản</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="/Admin/User/Index">View
-                                            Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 comboxtieude" for="id_TrangThai">Trạng Th&#225;i</label>
+                            <div class="col-md-10">
+                                <select class="form-control" data-val="true"
+                                    data-val-number="The field id_TrangThai must be a number." id="id_TrangThai"
+                                    name="id_TrangThai">
+                                    <option value="1">Ho&#224;n Th&#224;nh</option>
+                                    <option value="2">Đang Cập Nhật</option>
+                                </select>
+                                <span class="field-validation-valid text-danger" data-valmsg-for="id_TrangThai"
+                                    data-valmsg-replace="true"></span>
                             </div>
-                            <div class="col-xl-2 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Số tác giả</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="/Admin/Author/Index">View
-                                            Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="line"></div>
+                    </div> 
+                    <div class="groupTieudeAnhtruyen">
+                        <div class="line"></div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2 comboxtieude" for="TieuDe">Ti&#234;u đề</label>
+                            <div class="col-md-10">
+                                <input class="form-control text-box single-line" data-val="true"
+                                    data-val-length="The field TieuDe must be a string with a maximum length of 150."
+                                    data-val-length-max="150" id="TieuDe" name="TieuDe" type="text" value="" />
+                                <span class="field-validation-valid text-danger" data-valmsg-for="TieuDe"
+                                    data-valmsg-replace="true"></span>
                             </div>
-                            <div class="col-xl-2 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Số thể loại</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="/Admin/Category/Index">View
-                                            Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="control-label col-md-2 comboxtieude" for="AnhTruyen">Ảnh truyện</label>
+                            <div class="col-md-10">
+                                <input class="form-control text-box single-line" data-val="true"
+                                    data-val-length="The field AnhTruyen must be a string with a maximum length of 255."
+                                    data-val-length-max="255" id="AnhTruyen" name="AnhTruyen" type="text" value="" />
+                                <span class="field-validation-valid text-danger" data-valmsg-for="AnhTruyen"
+                                    data-valmsg-replace="true"></span>
                             </div>
-                            <div class="col-xl-2 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Số truyện</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="/Admin/Story/Index">View
-                                            Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="line"></div>
+                    </div>
+                        <div class="form-group">
+                            <label class="control-label col-md-2" for="GioiThieu">Giới Thiệu</label>
+                            <div class="col-md-10">
+                                <input class="form-control text-box single-line" id="GioiThieu" name="GioiThieu"
+                                    type="text" value="" />
+                                <span class="field-validation-valid text-danger" data-valmsg-for="GioiThieu"
+                                    data-valmsg-replace="true"></span>
                             </div>
-                            <div class="col-xl-2 col-md-6">
-                                <div class="card bg-primary text-white mb-4">
-                                    <div class="card-body">Số bình luận</div>
-                                    <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <a class="small text-white stretched-link" href="/Admin/Comment/Index">View
-                                            Details</a>
-                                        <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-                                    </div>
-                                </div>
+                        </div>
+
+                        <div class="form-group btn-them">
+                            <div class="btn btn-success btn-icon-split">
+                                <span class="icon text-white-100">
+                                    <i class="fas fa-check"></i>
+                                </span>
+                                <input type="submit" value="Thêm truyện" class="btn btn-default" style="color: white;" />
                             </div>
                         </div>
                     </div>
-                </main>
-
-            </main>
-
-            <footer class="py-4 bg-light mt-auto">
-                <div class="container-fluid px-4">
-                    <div class="d-flex align-items-center justify-content-between small">
-                        <div class="text-muted">Copyright &copy; Trang chủ website đọc truyện online</div>
-                        <div>
-                            <a href="#">Privacy Policy</a>
-                            &middot;
-                            <a href="#">Terms &amp; Conditions</a>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-
-
+                </form>
+            </div>
+            <!-- End of Main Content -->
         </div>
+        <!-- End of Content Wrapper -->
     </div>
-    <script src="/Scripts/jquery.unobtrusive-ajax.js"></script>
-    <script src="/Scripts/jquery.unobtrusive-ajax.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
-    <script src="/assets/admin/js/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="/assets/admin/assets/demo/chart-area-demo.js"></script>
-    <script src="/assets/admin/assets/demo/chart-bar-demo.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
-    <script src="/assets/admin/js/datatables-simple-demo.js"></script>
+    <!-- End of Page Wrapper -->
+    <script src="https://kit.fontawesome.com/02c8afadd6.js" crossorigin="anonymous"></script>
+    <!-- Bootstrap core JavaScript-->
+    <script src="/Scripts/jquery.min.js"></script>
+    <script src="/Scripts/bootstrap.bundle.min.js"></script>
 
-    <script src="/assets/admin/js/plugins/ckfinder/ckfinder.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="/Scripts/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="/Scripts/sb-admin-2.min.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/Scripts/Chart.min.js"></script>
+
+    <!-- Page level custom scripts -->
+    <script src="/Scripts/chart-area-demo.js"></script>
+    <script src="/Scripts/chart-pie-demo.js"></script>
+
+    <!-- Page level plugins -->
+    <script src="/Scripts/jquery.dataTables.min.js"></script>
+    <script src="/Scripts/dataTables.bootstrap4.min.js"></script>
 
 
-    <script src="/Scripts/jquery-3.4.1.js"></script>
-    <script src="/Scripts/jquery-3.4.1.min.js"></script>
+    <!-- Page level custom scripts -->
+    <script src="/Scripts/datatables-demo.js"></script>
 
-    ;
 
 </body>
+
+
+</html>

@@ -59,7 +59,5 @@ namespace FS_Project.Context
                 .Property(e => e.PassWords)
                 .IsUnicode(false);
         }
-
-        public System.Data.Entity.DbSet<FS_Project.Models.ViewTruyen> ViewTruyens { get; set; }
     }
 }

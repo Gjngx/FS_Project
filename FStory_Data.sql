@@ -44,7 +44,7 @@ CREATE TABLE Truyen(
 	AnhTruyen NVARCHAR(255),	
 	GioiThieu NTEXT,		
 	LuotXem INT,	
-	NgayDang DATETIME,
+	NgayDang DATETIME DEFAULT GETDATE(),
 	FOREIGN KEY(id_TacGia) REFERENCES dbo.TacGia(id_TacGia),
 	FOREIGN KEY(id_TheLoai) REFERENCES dbo.TheLoai(id_TheLoai),
 	FOREIGN KEY(id_TrangThai) REFERENCES dbo.TrangThai(id_TrangThai)
@@ -14943,18 +14943,31 @@ go
 
 --exec CountTheLoai 1
 
-
-create proc GetTruyen
-as
-select * from dbo.Truyen
+--create proc GetTruyen
+--as
+--select * from dbo.Truyen
+--go
+--create proc GetAdmin
+--as
+--select * from dbo.Admins
+--go
+--create proc GetUser
+--as
+--select * from dbo.Users
+--drop proc InsertTruyen
 go
-create proc GetAdmin
-as
-select * from dbo.Admins
+create proc InsertTruyen 
+	@IdTacGia int,
+	@IdTheLoai int,
+	@IdTrangThai int,
+	@tentruyen nvarchar(255),
+	@tieude varchar(150),
+	@anhtruyen nvarchar(255),
+	@gioithieu ntext
+as 
+begin
+	insert into Truyen(id_TacGia, id_TheLoai, id_TrangThai, TenTruyen, TieuDe, AnhTruyen, GioiThieu)
+	values(@IdTacGia, @IdTheLoai, @IdTrangThai, @tentruyen, @tieude, @anhtruyen, @gioithieu)
+end
 go
-create proc GetUser
-as
-select * from dbo.Users
-
-select * from dbo.TrangThai
-
+exec InsertTruyen 1,1,1,'Hồn đế','hon-de','hon-de,jpg','Chưa có'
