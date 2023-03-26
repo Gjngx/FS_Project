@@ -36,7 +36,7 @@ namespace FS_Project.Areas.admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ThemTruyen(Truyen truyens)
+        public ActionResult ThemTruyen(Truyen truyens, HttpPostedFileBase file)
         {
             try
             {
@@ -92,6 +92,13 @@ namespace FS_Project.Areas.admin.Controllers
                 }
             }
             return View("Index");
+        }
+
+        [HttpDelete]
+        public ActionResult XoaTruyen(int id)
+        {
+            new TruyenDAO().DeleteTruyen(id);
+            return RedirectToAction("Index", "Truyen");
         }
 
         public ActionResult ChuongTruyen(int id)

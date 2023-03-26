@@ -14,7 +14,20 @@ namespace FS_Project.DAO
     {
         DbModel db = new DbModel();
 
-
+        public bool DeleteTruyen(int id)
+        {
+            try
+            {
+                var storydel = db.Truyens.Find(id);
+                db.Truyens.Remove(storydel);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
         public bool UpdateTruyen( int id,Truyen t)
         {
             try

@@ -46,7 +46,14 @@
                                 <td>@t.trangthai</td>
                                 <td><a href="/admin/Truyen/ChuongTruyen/@t.ID"><i class="fas fa-info-circle"></i></a></td>
                                 <td><a href="/admin/Truyen/CapNhatTruyen/@t.ID"><i class="fa-regular fa-pen-to-square"></i></a></td>
-                                <td><a href="#"><i style="color: red" class="fa-solid fa-trash-can"></i></a></td>
+                                <td>
+                                    @Ajax.ActionLink("Xóa", "XoaTruyen", new { @id = t.ID }, new AjaxOptions
+                               {
+                                   Confirm = "Bạn có muốn xóa truyện này?",
+                                   OnComplete = "$('#row_" + t.ID + "').remove()",
+                                   HttpMethod = "Delete"
+                               })
+                                </td>
                             </tr>
                         }
                     </tbody>
