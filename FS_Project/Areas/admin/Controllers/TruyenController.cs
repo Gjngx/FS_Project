@@ -36,7 +36,7 @@ namespace FS_Project.Areas.admin.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult ThemTruyen(Truyen truyens, HttpPostedFileBase file)
+        public ActionResult ThemTruyen(Truyen truyens)
         {
             try
             {
@@ -106,6 +106,71 @@ namespace FS_Project.Areas.admin.Controllers
             List<ChuongTruyen> model = new List<ChuongTruyen>();
             model = new TruyenDAO().GetChuongTruyenById(id);
             return View(model);
+        }
+        [HttpGet]
+        public ActionResult ThemChuong()
+        {
+            List<Truyen> truyens = db.Truyens.ToList();
+            SelectList listtruyens = new SelectList(truyens, "id_Truyen", "TenTruyen");
+            ViewBag.dsTruyen = listtruyens;
+            return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult ThemChuong(ChuongTruyen CTruyens)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    var model = new TruyenDAO();
+                    int res = model.InsertChuong(CTruyens.id_Truyen, CTruyens.TenChuong, CTruyens.tieuDe, CTruyens.SoChuong, CTruyens.NoiDungChu);
+                    if (res > 0)
+                        return RedirectToAction("Index");
+                    else
+                    {
+                        ModelState.AddModelError("", "Thêm mới thất bại!");
+                    }
+                }
+                return View(CTruyens);
+            }
+            catch
+            {
+                return View();
+
+            }
+        }
+        public ActionResult CapNhatChuong(int id)
+        {
+            var CTruyens = new TruyenDAO().xemchuong(id);
+            List<Truyen> truyens = db.Truyens.ToList();
+            SelectList listtruyens = new SelectList(truyens, "id_Truyen", "TenTruyen");
+            ViewBag.dsTruyen = listtruyens;
+            return View(CTruyens);
+        }
+
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CapNhatChuong(int id, ChuongTruyen CTruyen)
+        {
+            if (ModelState.IsValid)
+            {
+                var kqua = new TruyenDAO().UpdateChuongTruyen(id, CTruyen);
+                if (kqua)
+                {
+                    return RedirectToAction("Index", "Truyen");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Cập nhật thất bại!");
+                }
+            }
+            return View("Index");
+        }
+        public ActionResult XoaChuong(int id)
+        {
+            new TruyenDAO().DeleteChuong(id);
+            return RedirectToAction("Index", "Truyen");
         }
     }
 }

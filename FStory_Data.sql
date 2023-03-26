@@ -14955,7 +14955,7 @@ go
 --as
 --select * from dbo.Users
 --drop proc InsertTruyen
-go
+
 create proc InsertTruyen 
 	@IdTacGia int,
 	@IdTheLoai int,
@@ -14970,4 +14970,18 @@ begin
 	values(@IdTacGia, @IdTheLoai, @IdTrangThai, @tentruyen, @tieude, @anhtruyen, @gioithieu)
 end
 go
-exec InsertTruyen 1,1,1,'Hồn đế','hon-de','hon-de,jpg','Chưa có'
+
+create proc InsertChuong
+	@IdTruyen int,
+	@TenChuong nvarchar(255),
+	@TieuDe varchar(150),
+	@SoChuong int,
+	@NoiDungChu ntext
+as 
+begin
+	insert into ChuongTruyen(id_Truyen, TenChuong, TieuDe, SoChuong, NoiDungChu)
+	values(@IdTruyen, @TenChuong, @TieuDe, @SoChuong, @NoiDungChu)
+end
+go
+
+--exec InsertChuong 1, N'Chương 6', 'chuong-6', 6, N'Giang'

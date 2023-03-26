@@ -137,6 +137,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Areas\admin\Controllers\AdminTrangChuController.cs" />
+    <Compile Include="Areas\admin\Controllers\FileUploadController.cs" />
     <Compile Include="Areas\admin\Controllers\TacGiaController.cs" />
     <Compile Include="Areas\admin\Controllers\TheLoaiController.cs" />
     <Compile Include="Areas\admin\Controllers\TruyenController.cs" />
@@ -161,6 +162,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\FileUploadModel.cs" />
     <Compile Include="Models\ViewTruyen.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -225,6 +227,9 @@
     <Content Include="Areas\admin\Views\Truyen\ChuongTruyen.cshtml" />
     <Content Include="Areas\admin\Views\Truyen\ThemTruyen.cshtml" />
     <Content Include="Areas\admin\Views\Truyen\CapNhatTruyen.cshtml" />
+    <Content Include="Areas\admin\Views\FileUpload\Index.cshtml" />
+    <Content Include="Areas\admin\Views\Truyen\ThemChuong.cshtml" />
+    <Content Include="Areas\admin\Views\Truyen\CapNhatChuong.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\chart-area-demo.js" />
     <Content Include="Scripts\chart-pie-demo.js" />

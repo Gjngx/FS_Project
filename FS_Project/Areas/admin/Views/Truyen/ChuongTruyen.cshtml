@@ -14,7 +14,7 @@
     <div class="card shadow mb-4">
         <div class="card-header py-3">
             <h6 class="m-0 font-weight-bold text-primary">Danh sách chương</h6>
-            <a style="text-decoration: none" href="#">
+            <a style="text-decoration: none" href="/admin/Truyen/ThemChuong">
                 <h6 style=" padding: 1%;">Thêm chương <i class="fa-solid fa-circle-plus"></i></h6>
             </a>
         </div>
@@ -37,8 +37,15 @@
                                 <td>@ct.Truyen.TenTruyen</td>
                                 <td>@ct.TenChuong</td>
                                 <td>@ct.NoiDungChu</td>
-                                <td><a href="#"><i class="fa-regular fa-pen-to-square"></i></a></td>
-                                <td><a href="#"><i style="color: red" class="fa-solid fa-trash-can"></i></a></td>
+                                <td><a href="/admin/Truyen/CapNhatChuong/@ct.id_Chuong"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                                <td>
+                                    @Ajax.ActionLink("Xóa", "XoaChuong", new { @id = ct.id_Chuong }, new AjaxOptions
+                               {
+                                   Confirm = "Bạn có muốn xóa Chương truyện này?",
+                                   OnComplete = "$('#row_" + ct.id_Chuong + "').remove()",
+                                   HttpMethod = "Delete"
+                               })
+                                </td>
                             </tr>
                         }
                     </tbody>

@@ -14,6 +14,69 @@ namespace FS_Project.DAO
     {
         DbModel db = new DbModel();
 
+        public bool DeleteChuong(int id)
+        {
+            try
+            {
+                var chuongdel = db.ChuongTruyens.Find(id);
+                db.ChuongTruyens.Remove(chuongdel);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+
+        public bool UpdateChuongTruyen(int id, ChuongTruyen ct)
+        {
+            try
+            {
+                var chuongtruyen = db.ChuongTruyens.Find(id);
+                chuongtruyen.id_Truyen = ct.id_Truyen;
+                chuongtruyen.TenChuong = ct.TenChuong;
+                chuongtruyen.tieuDe = ct.tieuDe;
+                chuongtruyen.SoChuong = ct.SoChuong;
+                chuongtruyen.NoiDungChu = ct.NoiDungChu;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public long InsertChuongTruyen(ChuongTruyen chuongtruyen, int id_truyen)
+        {
+                var them = new ChuongTruyen();
+                them.TenChuong = chuongtruyen.TenChuong;
+                them.SoChuong = chuongtruyen.SoChuong;
+                them.tieuDe = chuongtruyen.tieuDe;
+                them.NoiDungChu = chuongtruyen.NoiDungChu;
+                var truyen = new Truyen();
+                db.ChuongTruyens.Add(them);
+
+                truyen = db.Truyens.Find(id_truyen);
+                db.SaveChanges();
+                return chuongtruyen.id_Chuong;
+        }
+
+        public int InsertChuong(int? IdTruyen, string TenChuong, string TieuDe, int? SoChuong, string NoiDungChu)
+        {
+            object[] data =
+            {
+                new SqlParameter("@IdTruyen", IdTruyen),
+                new SqlParameter("@TenChuong", TenChuong),
+                new SqlParameter("@TieuDe", TieuDe),
+                new SqlParameter("@SoChuong", SoChuong),
+                new SqlParameter("@NoiDungChu", NoiDungChu),
+            };
+            int res = db.Database.ExecuteSqlCommand("InsertChuong @IdTruyen, @TenChuong, @TieuDe, @SoChuong, @NoiDungChu", data);
+            return res;
+        }
+
         public bool DeleteTruyen(int id)
         {
             try
