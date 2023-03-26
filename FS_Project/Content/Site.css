@@ -66,6 +66,7 @@
         padding-right: 0.5rem;
     }
 
+
 .sidenav {
     height: 100%;
     width: 0;
@@ -110,6 +111,95 @@
         }
 }
 
+.truyennoibat {
+    display: block;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+    .truyennoibat h2 {
+        text-align: center;
+    }
+
+.row1 {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0px, 1fr));
+    text-align: center;
+}
+
+.tnb {
+}
+
+    .tnb img {
+        width: 90%;
+        border-radius: 4px;
+    }
+
+.main {
+    display: grid;
+    grid-template-columns: [truỵenmoi] 69% [line] 1% [bangxephang] 30%;
+}
+
+.truyenmoi {
+    display: block;
+    padding: 10px;
+    background-color: white;
+    border-radius: 5px;
+    text-align: center;
+}
+
+    .truyenmoi h2 {
+        text-align: center;
+    }
+
+.row2 {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0px, 1fr));
+    text-align: center;
+}
+
+.tm {
+}
+
+    .tm img {
+        width: 90%;
+        border-radius: 4px;
+    }
+
+.pagination {
+    display: inline-block;
+    padding: 10px;
+}
+
+    .pagination a {
+        color: black;
+        float: left;
+        padding: 8px 16px;
+        text-decoration: none;
+        border: 1px solid #ddd;
+    }
+
+        .pagination a.active {
+            background-color: #4CAF50;
+            color: white;
+            border: 1px solid #4CAF50;
+        }
+
+        .pagination a:hover:not(.active) {
+            background-color: #ddd;
+        }
+
+        .pagination a:first-child {
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+        }
+
+        .pagination a:last-child {
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+
 .footer {
     color: white;
     background-color: rgb(40, 34, 34);
@@ -117,8 +207,6 @@
     margin: 0px -7.7888888px -7.8888px;
     display: grid;
     grid-template-columns: repeat(3, minmax(0px, 1fr));
-    left: 0;
-    bottom: 0;
 }
 
 .b1 {
@@ -131,8 +219,8 @@
 }
 
     .b2 img {
-        width: 400px;
-        padding-right: 20px;
+        text-align: center;
+        width: 100%;
     }
 
 .b3 {
