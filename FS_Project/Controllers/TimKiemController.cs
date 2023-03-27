@@ -15,7 +15,6 @@ namespace FS_Project.Controllers
 
         public ActionResult Index(string timkiemstring)
         {
-            ViewBag.truyenmoi = new TruyenDAO().truyentheosoluong(10);
             var truyen = from t in db.Truyens select t;
             if (!String.IsNullOrEmpty(timkiemstring))
             {

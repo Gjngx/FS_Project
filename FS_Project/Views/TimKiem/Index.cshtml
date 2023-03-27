@@ -1,8 +1,7 @@
-﻿
+﻿@model IEnumerable<FS_Project.Context.Truyen>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Shared/_Layout.cshtml";
-    var truyenmoi = (List<FS_Project.Context.Truyen>)ViewBag.truyenmoi;
 }
 
 <link rel="stylesheet" href="~/Content/Style-TimTacGia.css">
@@ -14,12 +13,12 @@
         @using (Html.BeginForm("Index", "TimKiem", FormMethod.Get))
         {
             <div class="find">
-                <input type="search" class="otimkiem" name="timkiemstring">
-                <input type="button" value="Tìm truyện" class="button">
+                <input type="text" class="otimkiem" name="timkiemstring">
+                <input type="submit" value="Tìm truyện" class="button">
             </div>
         }
         <li class="danhsach">
-            @foreach (var t in truyenmoi)
+            @foreach (var t in Model)
             {
                 <div class="item">
                     <a href="@Url.Action("Index","ChiTietTruyen", new {id = t.id_Truyen})">
