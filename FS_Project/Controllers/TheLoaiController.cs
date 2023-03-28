@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Policy;
 using System.Web;
 using System.Web.Mvc;
 
@@ -16,5 +17,7 @@ namespace FS_Project.Controllers
             ViewBag.TheLoai = new TheLoaiDAO().ChiTietTheLoai(id);
             return View(model);
         }
+
+
     }
 }

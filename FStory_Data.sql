@@ -14958,7 +14958,7 @@ go
 
 create proc InsertTruyen 
 	@IdTacGia int,
-	@IdTheLoai int,
+	@IdTheLoai int,Can
 	@IdTrangThai int,
 	@tentruyen nvarchar(255),
 	@tieude varchar(150),
@@ -14984,4 +14984,14 @@ begin
 end
 go
 
+create proc InsertTheLoai
+	@TenTheLoai nvarchar(255),
+	@TieuDe varchar(150)
+as
+begin
+	insert into TheLoai(TenTheLoai,TieuDe)
+	values(@TenTheLoai,@TieuDe)
+end
+go
+--exec InsertTheLoai N'Cổ Đại',N'co-dai'
 --exec InsertChuong 1, N'Chương 6', 'chuong-6', 6, N'Giang'

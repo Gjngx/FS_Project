@@ -48,20 +48,6 @@ namespace FS_Project.DAO
             }
         }
 
-        public long InsertChuongTruyen(ChuongTruyen chuongtruyen, int id_truyen)
-        {
-                var them = new ChuongTruyen();
-                them.TenChuong = chuongtruyen.TenChuong;
-                them.SoChuong = chuongtruyen.SoChuong;
-                them.tieuDe = chuongtruyen.tieuDe;
-                them.NoiDungChu = chuongtruyen.NoiDungChu;
-                var truyen = new Truyen();
-                db.ChuongTruyens.Add(them);
-
-                truyen = db.Truyens.Find(id_truyen);
-                db.SaveChanges();
-                return chuongtruyen.id_Chuong;
-        }
 
         public int InsertChuong(int? IdTruyen, string TenChuong, string TieuDe, int? SoChuong, string NoiDungChu)
         {

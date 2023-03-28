@@ -1,6 +1,7 @@
 ﻿using FS_Project.Context;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 
@@ -35,7 +36,16 @@ namespace FS_Project.DAO
             return list;
         }
 
-
+        public int InsertTheLoai(string tentheloai,string tieude)
+        {
+            object[] data =
+            {
+                new SqlParameter("@TenTheLoai",tentheloai),
+                new SqlParameter("@TieuDe",tieude)
+            };
+            int res = db.Database.ExecuteSqlCommand("InsertTheLoai @TenTheLoai,@TieuDe", data);
+            return res;
+        }
     }
     
 }
