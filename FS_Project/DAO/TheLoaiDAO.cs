@@ -46,6 +46,37 @@ namespace FS_Project.DAO
             int res = db.Database.ExecuteSqlCommand("InsertTheLoai @TenTheLoai,@TieuDe", data);
             return res;
         }
+
+        public bool UpdateTheLoai(int id, TheLoai tl)
+        {
+            try
+            {
+                var theloais = db.TheLoais.Find(id);
+                theloais.TenTheLoai = tl.TenTheLoai;
+                theloais.TieuDe=tl.TieuDe;
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public bool DeleteTheLoai(int id)
+        {
+            try
+            {
+                var tldel = db.TheLoais.Find(id);
+                db.TheLoais.Remove(tldel);
+                db.SaveChanges();
+                return true;
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
     }
     
 }

@@ -18,7 +18,7 @@ namespace FS_Project.Areas.admin.Controllers
             var model = new TheLoaiDAO().GetTheLoai();
             return View(model);
         }
-
+        
         public ActionResult ThemTheLoai(TheLoai theloais)
         {
             try
@@ -42,6 +42,38 @@ namespace FS_Project.Areas.admin.Controllers
 
             }
 
+        }
+
+        [HttpGet]
+        public ActionResult CapNhatTheLoai(int id)
+        {
+            var theloais = new TheLoaiDAO().ChiTietTheLoai(id);               
+            return View(theloais);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CapNhatTheLoai(int id, TheLoai theloais)
+        {
+            if (ModelState.IsValid)
+            {
+                var kqua = new TheLoaiDAO().UpdateTheLoai(id,theloais);
+                if (kqua)
+                {
+                    return RedirectToAction("Index", "TheLoai");
+                }
+                else
+                {
+                    ModelState.AddModelError("", "Cập nhật thất bại!");
+                }
+            }
+            return View("Index");
+        }
+
+        [HttpDelete]
+        public ActionResult XoaTheLoai(int id)
+        {
+            new TheLoaiDAO().DeleteTheLoai(id);
+            return RedirectToAction("Index", "TheLoai");
         }
     }
 }

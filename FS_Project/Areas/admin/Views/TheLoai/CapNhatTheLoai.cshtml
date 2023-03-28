@@ -1,13 +1,13 @@
 ﻿@model FS_Project.Context.TheLoai
 
 @{
-    ViewBag.Title = "ThemTheLoai";
+    ViewBag.Title = "CapNhatTheLoai";
     Layout = "~/Areas/admin/Views/Shared/_Layout_Admin.cshtml";
 }
 
-<h2>ThemTheLoai</h2>
+<h2>CapNhatTheLoai</h2>
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     
@@ -15,6 +15,8 @@
         <h4>TheLoai</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.id_TheLoai)
+
         <div class="form-group">
             @Html.LabelFor(model => model.TenTheLoai, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
@@ -36,7 +38,7 @@
                 <span class="icon text-white-100">
                     <i class="fas fa-check"></i>
                 </span>
-                <input type="submit" value="Thêm thể loại" class="btn btn-default" style="color: white;" />
+                <input type="submit" value="Lưu Thể Loại" class="btn btn-default" style="color: white;" />
             </div>
         </div>
     </div>
@@ -45,5 +47,3 @@
 <div>
     @Html.ActionLink("Quay trở lại", "Index")
 </div>
-
-

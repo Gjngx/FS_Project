@@ -36,9 +36,16 @@
                             <tr>
                                 <td>@tl.id_TheLoai</td>
                                 <td>@tl.TenTheLoai</td>
-                                <td><a href="#"><i class="fa-regular fa-pen-to-square"></i></a></td>
-                                <td><a href="#"><i style="color: red" class="fa-solid fa-trash-can"></i></a></td>
-                            </tr>
+                                <td><a href="/admin/TheLoai/CapNhatTheLoai/@tl.id_TheLoai"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                                <td>
+                                        @Ajax.ActionLink("Xóa", "XoaTheLoai", new { @id = tl.id_TheLoai }, new AjaxOptions
+                                   {
+                                       Confirm = "Bạn có muốn xóa thể loại này?",
+                                       OnComplete = "$('#row_" + tl.id_TheLoai + "').remove()",
+                                       HttpMethod = "Delete"
+                                   })
+                                </td>
+                            </tr>                 
                         }
                     </tbody>
                 </table>

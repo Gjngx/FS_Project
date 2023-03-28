@@ -229,6 +229,7 @@
     <Content Include="Areas\admin\Views\Truyen\ThemChuong.cshtml" />
     <Content Include="Areas\admin\Views\Truyen\CapNhatChuong.cshtml" />
     <Content Include="Areas\admin\Views\TheLoai\ThemTheLoai.cshtml" />
+    <Content Include="Areas\admin\Views\TheLoai\CapNhatTheLoai.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\chart-area-demo.js" />
     <Content Include="Scripts\chart-pie-demo.js" />
