@@ -167,6 +167,7 @@ namespace FS_Project.Areas.admin.Controllers
             }
             return View("Index");
         }
+        [HttpDelete]
         public ActionResult XoaChuong(int id)
         {
             new TruyenDAO().DeleteChuong(id);
