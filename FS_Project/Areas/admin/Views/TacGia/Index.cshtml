@@ -36,8 +36,15 @@
                             <tr>
                                 <td>@tg.id_TacGia</td>
                                 <td>@tg.TenTacGia</td>
-                                <td><a href="#"><i class="fa-regular fa-pen-to-square"></i></a></td>
-                                <td><a href="#"><i style="color: red" class="fa-solid fa-trash-can"></i></a></td>
+                                <td><a href="/admin/TacGia/CapNhatTacGia/@tg.id_TacGia"><i class="fa-regular fa-pen-to-square"></i></a></td>
+                                <td>
+                                    @Ajax.ActionLink("Xóa", "XoaTacGia", new { @id = tg.id_TacGia }, new AjaxOptions
+                               {
+                                   Confirm = "Bạn có muốn xóa tác giả này?",
+                                   OnComplete = "$('#row_" + tg.id_TacGia + "').remove()",
+                                   HttpMethod = "Delete"
+                               })
+                                </td>
                             </tr>
                         }
                     </tbody>
