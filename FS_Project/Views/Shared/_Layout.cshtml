@@ -27,11 +27,26 @@
                     <img src="~/images/search.png">
                 </a>
             </div>
-            <div class="account">
-                <a style="height: 25px;" href="#">
-                    <img src="~/images/user.png">
-                </a>
-            </div>
+            @{
+                var session = (FS_Project.Common.UserLogin)Session[FS_Project.Common.Constants.USER_SESSION];
+            }
+            @if (Session[FS_Project.Common.Constants.USER_SESSION] == null)
+            {
+                <div class="account">
+                    <a style="height: 25px;" href="@Url.Action("Index","Account")">
+                        <img src="~/images/user.png">
+                    </a>
+                </div>
+            }
+            else
+            {
+                <div>
+
+                    <a href="/ManageAccount/Index/@session.ID"> <img style="width:25px;" src="https://ui-avatars.com/api/?name= @session.UserName" /></a>
+                    <a href="@Url.Action("Logout","Account")"><img style="width:15px;padding-top:5px" src="~/images/logout.png" alt="Logout" /></a>
+
+                </div>
+            }
             <div class="menu">
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>

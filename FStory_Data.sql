@@ -14958,7 +14958,7 @@ go
 
 create proc InsertTruyen 
 	@IdTacGia int,
-	@IdTheLoai int,Can
+	@IdTheLoai int,
 	@IdTrangThai int,
 	@tentruyen nvarchar(255),
 	@tieude varchar(150),
