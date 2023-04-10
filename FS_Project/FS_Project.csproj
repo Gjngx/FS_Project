@@ -248,6 +248,8 @@
     <Content Include="Areas\admin\Views\AdminTK\Index.cshtml" />
     <Content Include="Areas\admin\Views\AdminTK\ThemTKAdmin.cshtml" />
     <Content Include="Areas\admin\Views\UserTK\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\giangdang-001-site1 - FTP.pubxml" />
+    <None Include="Properties\PublishProfiles\giangdang-001-site1 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\chart-area-demo.js" />
     <Content Include="Scripts\chart-pie-demo.js" />

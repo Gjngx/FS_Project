@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using PagedList;
+using PagedList.Mvc;
 
 namespace FS_Project.Controllers
 {
@@ -16,11 +17,12 @@ namespace FS_Project.Controllers
         public ActionResult Index(int ? page)
         {
             var dao = new TruyenDAO();
-            if(page == null) page = 1;
-            ViewBag.truyenmoi = dao.truyenmoi();
+            int pagesize = 20;
+            int pagenum = (page ?? 1);
+            var truyenmoi = dao.truyenmoi();
             ViewBag.truyennoibat = dao.DSTruyenNoiBat(5);
             ViewBag.DSTheLoai = new TheLoaiDAO().DSTheLoai();
-            return View();
+            return View(truyenmoi.ToPagedList(pagenum, pagesize));
         }
         
     }

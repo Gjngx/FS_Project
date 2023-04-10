@@ -1,67 +1,69 @@
-﻿
-@{
-    ViewBag.Title = "Trang chủ";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-    var truyennoibat = (List<FS_Project.Context.Truyen>)ViewBag.truyennoibat;
-    var truyenmoi = (List<FS_Project.Context.Truyen>)ViewBag.truyenmoi;
-    var DSTheLoai = (List<FS_Project.Context.TheLoai>)ViewBag.DSTheLoai;
-}
-<link rel="stylesheet" href="~/Content/StyleFS-TrangChu.css">
-<div class="body" style="margin: 60px 70px;">
-    <div class="truyennoibat">
-        <h2 class="txttnb"><i>Truyện nổi bật</i></h2>
-        <div class="row1">
-            @foreach (var tnb in truyennoibat)
-            {
-                <div class="tnb">
-                    <a style="text-decoration: none; color: black" href="@Url.Action("Index","ChiTietTruyen", new {id = tnb.id_Truyen})">
-                        <img src="~/images/imgTruyen/@tnb.AnhTruyen" title="@tnb.TenTruyen">
-                        <h4>@tnb.TenTruyen</h4>
-                    </a>
-                </div>
-            }
-        </div>
-    </div>
-    <div style="height: 10px"></div>
-    <div class="main">
-        <div class="truyenmoi">
-            <h2 class="txttm"><i>Truyện mới</i></h2>
-            <div class="row2">
-                @foreach (var tm in truyenmoi)
+﻿@using PagedList.Mvc
+@model PagedList.PagedList<FS_Project.Context.Truyen>
+    @{
+        ViewBag.Title = "Trang chủ";
+        Layout = "~/Views/Shared/_Layout.cshtml";
+        var truyennoibat = (List<FS_Project.Context.Truyen>)ViewBag.truyennoibat;
+
+        var DSTheLoai = (List<FS_Project.Context.TheLoai>)ViewBag.DSTheLoai;
+    }
+    <link rel="stylesheet" href="~/Content/StyleFS-TrangChu.css">
+    <div class="body" style="margin: 60px 70px;">
+        <div class="truyennoibat">
+            <h2 class="txttnb"><i>Truyện nổi bật</i></h2>
+            <div class="row1">
+                @foreach (var tnb in truyennoibat)
                 {
-                    <div class="tm">
-                        <a style="text-decoration: none; color: black" href="@Url.Action("Index","ChiTietTruyen", new {id = tm.id_Truyen})">
-                            <img src="~/images/imgTruyen/@tm.AnhTruyen" title="@tm.TenTruyen">
-                            <h4>@tm.TenTruyen</h4>
+                    <div class="tnb">
+                        <a style="text-decoration: none; color: black" href="@Url.Action("Index", "ChiTietTruyen", new { id = tnb.id_Truyen })">
+                            <img src="~/images/imgTruyen/@tnb.AnhTruyen" title="@tnb.TenTruyen">
+                            <h4>@tnb.TenTruyen</h4>
                         </a>
                     </div>
                 }
             </div>
-            <div class="pagination">
-                <a href="#">&laquo;</a>
-                <a href="#">1</a>
-                <a class="active" href="#">2</a>
-                <a href="#">3</a>
-                <a href="#">4</a>
-                <a href="#">5</a>
-                <a href="#">6</a>
-                <a href="#">&raquo;</a>
-                </div>
         </div>
-        <div class="line" style="width: 5px;"></div>
-        <div class="theloai">
-            <div class="tieude">
-                <h2 style="text-align: center;">Thể loại</h2>
+        <div style="height: 10px"></div>
+        <div class="main">
+            <div class="truyenmoi">
+                <h2 class="txttm"><i>Truyện mới</i></h2>
+                <div class="row2">
+                    @foreach (var tm in Model)
+                    {
+                        <div class="tm">
+                            <a style="text-decoration: none; color: black" href="@Url.Action("Index", "ChiTietTruyen", new { id = tm.id_Truyen })">
+                                <img src="~/images/imgTruyen/@tm.AnhTruyen" title="@tm.TenTruyen">
+                                <h4>@tm.TenTruyen</h4>
+                            </a>
+                        </div>
+                    }
+                </div>
+                <div class="MenuTrang">
+                    @Html.PagedListPager(Model, page => Url.Action("Index", new { page = page }))
+                </div>
+                <style>
+                    .MenuTrang li {
+                        display: inline;
+                    }
+                    .active a {
+                        background: #4CAF50;
+                    }
+                </style>
             </div>
-            <div class="row-theloai">
-                @foreach (var tl in DSTheLoai)
-                {
-                    <div class="col-theloai">
-                        <a class="" href="@Url.Action("Index","TheLoai", new {id = tl.id_TheLoai})" title="Truyện @tl.TenTheLoai">@tl.TenTheLoai</a>
-                    </div>
-                }
+            <div class="line" style="width: 5px;"></div>
+            <div class="theloai">
+                <div class="tieude">
+                    <h2 style="text-align: center;">Thể loại</h2>
+                </div>
+                <div class="row-theloai">
+                    @foreach (var tl in DSTheLoai)
+                    {
+                        <div class="col-theloai">
+                            <a href="/TheLoai/Index/@tl.id_TheLoai" title="Truyện @tl.TenTheLoai">@tl.TenTheLoai</a>
+                        </div>
+                    }
+                </div>
             </div>
         </div>
     </div>
-</div>
 
