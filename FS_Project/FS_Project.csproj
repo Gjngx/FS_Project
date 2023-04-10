@@ -134,11 +134,13 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
+    <Compile Include="Areas\admin\Controllers\AdminTKController.cs" />
     <Compile Include="Areas\admin\Controllers\AdminTrangChuController.cs" />
     <Compile Include="Areas\admin\Controllers\FileUploadController.cs" />
     <Compile Include="Areas\admin\Controllers\TacGiaController.cs" />
     <Compile Include="Areas\admin\Controllers\TheLoaiController.cs" />
     <Compile Include="Areas\admin\Controllers\TruyenController.cs" />
+    <Compile Include="Areas\admin\Controllers\UserTKController.cs" />
     <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\Encrypt_MD5.cs" />
     <Compile Include="Common\UserLogin.cs" />
@@ -158,6 +160,7 @@
     <Compile Include="Controllers\TheLoaiController.cs" />
     <Compile Include="Controllers\TimKiemController.cs" />
     <Compile Include="Controllers\TrangChuController.cs" />
+    <Compile Include="DAO\AdminDAO.cs" />
     <Compile Include="DAO\TacGiaDAO.cs" />
     <Compile Include="DAO\TheLoaiDAO.cs" />
     <Compile Include="DAO\TrangThaiDAO.cs" />
@@ -242,6 +245,9 @@
     <Content Include="Areas\admin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\admin\Views\TacGia\CapNhatTacGia.cshtml" />
     <Content Include="Areas\admin\Views\TacGia\ThemTacGia.cshtml" />
+    <Content Include="Areas\admin\Views\AdminTK\Index.cshtml" />
+    <Content Include="Areas\admin\Views\AdminTK\ThemTKAdmin.cshtml" />
+    <Content Include="Areas\admin\Views\UserTK\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\chart-area-demo.js" />
     <Content Include="Scripts\chart-pie-demo.js" />
@@ -291,7 +297,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\admin\Data\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

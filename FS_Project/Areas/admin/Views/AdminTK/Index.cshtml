@@ -1,0 +1,51 @@
+﻿@model List<FS_Project.Context.Admin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/admin/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Quản lý tài khoản Admin</h1>
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Danh sách Tài khoản</h6>
+            <a style="text-decoration: none" href="/admin/AdminTK/ThemTKAdmin">
+                <h6 style=" padding: 1%;">Thêm Tài khoản<i class="fa-solid fa-circle-plus"></i></h6>
+            </a>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Username</th>
+                            <th>Xóa</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var ad in Model)
+                        {
+                            <tr>
+                                <td>@ad.id_Admin</td>
+                                <td>@ad.UserName</td>
+                                <td>
+                                    @Ajax.ActionLink("Xóa", "XoaTKAdmin", new { @id = ad.id_Admin }, new AjaxOptions
+                                   {
+                                       Confirm = "Bạn có muốn xóa tài khoản này không?",
+                                       OnComplete = "$('#row_" + ad.id_Admin + "').remove()",
+                                       HttpMethod = "Delete"
+                                   })
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
