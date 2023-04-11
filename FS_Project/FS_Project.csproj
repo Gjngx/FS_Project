@@ -196,6 +196,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\admin.png" />
     <Content Include="images\imgTruyen\ban-tien.jpg" />
     <Content Include="images\imgTruyen\co-chan-nhan.jpg" />
     <Content Include="images\imgTruyen\dai-quoc-tac.jpg" />
@@ -225,6 +226,7 @@
     <Content Include="images\logo.png" />
     <Content Include="images\logofacebook.png" />
     <Content Include="images\logoinstagram.png" />
+    <Content Include="images\logout.png" />
     <Content Include="images\search.png" />
     <Content Include="images\user.png" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
