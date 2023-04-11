@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace FS_Project.Areas.admin.Controllers
 {
-    public class TacGiaController : Controller
+    public class TacGiaController : BaseController
     {
         // GET: admin/TacGia
         public ActionResult Index()

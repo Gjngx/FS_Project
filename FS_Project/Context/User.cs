@@ -47,7 +47,6 @@ namespace FS_Project.Context
         [System.ComponentModel.DataAnnotations.Compare("PassWords")]
         public string ConfirmPassWords { get; set; }
         public bool TrangThai { get; set; }
-        public short? VIP { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<TheoDoi> TheoDois { get; set; }
 

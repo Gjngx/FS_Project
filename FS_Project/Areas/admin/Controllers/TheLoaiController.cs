@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace FS_Project.Areas.admin.Controllers
 {
-    public class TheLoaiController : Controller
+    public class TheLoaiController : BaseController
     {
         DbModel db = new DbModel();
         // GET: admin/TheLoai

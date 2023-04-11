@@ -8,7 +8,7 @@ using System.Web.Mvc;
 
 namespace FS_Project.Areas.admin.Controllers
 {
-    public class AdminTKController : Controller
+    public class AdminTKController : BaseController
     {
         // GET: admin/AdminTK
         public ActionResult Index()

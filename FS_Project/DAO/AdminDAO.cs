@@ -15,6 +15,33 @@ namespace FS_Project.DAO
             var list = db.Database.SqlQuery<Admin>("GetAdmin").ToList();
             return list;
         }
+        public Admin GetById(string userName)
+        {
+            return db.Admins.SingleOrDefault(x => x.UserName == userName);
+        }
+        public int Login(string UserName, string PassWord)
+        {
+            var result = db.Admins.SingleOrDefault(x => x.UserName == UserName);
+            if (result == null)
+            {
+                return 0;
+            }
+            else if (result.TrangThai == false)
+            {
+                return -1;
+            }
+            else
+            {
+                if (result.PassWords == PassWord)
+                {
+                    return 1;
+                }
+                else
+                {
+                    return -2;
+                }
+            }
+        }
         public int InsertAdmin(string username, string pass, bool? trangthai )
         {
             object[] data =

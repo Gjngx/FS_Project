@@ -67,29 +67,24 @@ namespace FS_Project.DAO
             db.SaveChanges();
             return user.id_User;
         }
-        public bool Update(string username, string passold, string newpass)
+        public bool Update(User entity)
         {
             try
             {
-                SqlConnection conn = new SqlConnection();
-                conn.ConnectionString = ConfigurationManager.ConnectionStrings["DbModel"].ConnectionString;
-                SqlCommand cmd = new SqlCommand();
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.CommandText = "SP_Update_Pass";
-                cmd.Parameters.Add("@User", SqlDbType.NVarChar).Value = username;
-                cmd.Parameters.Add("@OldPass", SqlDbType.NVarChar).Value = passold;
-                cmd.Parameters.Add("@NewPass", SqlDbType.NVarChar).Value = newpass;
-                cmd.Connection = conn;
-                conn.Open();
-                SqlDataReader dr;
-                dr = cmd.ExecuteReader();
-                dr.Read();
+                var user = db.Users.Find(entity.id_User);
+                user.HoTen = entity.HoTen;
+                user.Email = entity.Email;
+                user.GioiTinh = entity.GioiTinh;
+                user.UserName = entity.UserName;
+                user.PassWords = entity.PassWords;
+                db.SaveChanges();
+                return true;
             }
             catch (Exception ex)
             {
+                //logging
                 return false;
             }
-            return true;
         }
         public bool Delete(int id)
         {

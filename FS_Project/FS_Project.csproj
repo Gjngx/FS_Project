@@ -136,11 +136,14 @@
     <Compile Include="Areas\admin\adminAreaRegistration.cs" />
     <Compile Include="Areas\admin\Controllers\AdminTKController.cs" />
     <Compile Include="Areas\admin\Controllers\AdminTrangChuController.cs" />
+    <Compile Include="Areas\admin\Controllers\BaseController.cs" />
     <Compile Include="Areas\admin\Controllers\FileUploadController.cs" />
+    <Compile Include="Areas\admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\admin\Controllers\TacGiaController.cs" />
     <Compile Include="Areas\admin\Controllers\TheLoaiController.cs" />
     <Compile Include="Areas\admin\Controllers\TruyenController.cs" />
     <Compile Include="Areas\admin\Controllers\UserTKController.cs" />
+    <Compile Include="Common\AdminLogin.cs" />
     <Compile Include="Common\Constants.cs" />
     <Compile Include="Common\Encrypt_MD5.cs" />
     <Compile Include="Common\UserLogin.cs" />
@@ -193,6 +196,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\admin.png" />
     <Content Include="images\imgTruyen\ban-tien.jpg" />
     <Content Include="images\imgTruyen\co-chan-nhan.jpg" />
     <Content Include="images\imgTruyen\dai-quoc-tac.jpg" />
@@ -222,6 +226,7 @@
     <Content Include="images\logo.png" />
     <Content Include="images\logofacebook.png" />
     <Content Include="images\logoinstagram.png" />
+    <Content Include="images\logout.png" />
     <Content Include="images\search.png" />
     <Content Include="images\user.png" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -248,6 +253,9 @@
     <Content Include="Areas\admin\Views\AdminTK\Index.cshtml" />
     <Content Include="Areas\admin\Views\AdminTK\ThemTKAdmin.cshtml" />
     <Content Include="Areas\admin\Views\UserTK\Index.cshtml" />
+    <Content Include="Areas\admin\Views\Login\Index.cshtml" />
+    <Content Include="Areas\admin\Views\UserTK\Create.cshtml" />
+    <Content Include="Areas\admin\Views\UserTK\Edit.cshtml" />
     <None Include="Properties\PublishProfiles\giangdang-001-site1 - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\giangdang-001-site1 - Web Deploy.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
@@ -295,10 +303,11 @@
     <Content Include="Views\Account\Index.cshtml" />
     <Content Include="Views\Account\Register.cshtml" />
     <Content Include="Views\ManageAccount\Index.cshtml" />
-    <Content Include="Views\ManageAccount\Change_Password.cshtml" />
+    <Content Include="Views\ManageAccount\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Areas\admin\Views\Base\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

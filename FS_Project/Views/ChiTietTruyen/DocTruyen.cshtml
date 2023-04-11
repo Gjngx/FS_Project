@@ -9,37 +9,47 @@
 
 <link rel="stylesheet" href="~/Content/StyleFS-DocTruyen.css">
 <div class="body" style="margin: 60px 70px;">
-    <div class="doctruyen">
-        <h2>@Truyen.tentruyen</h2>
-        <h3>@Model.TenChuong</h3>
-        @if (Model.SoChuong == 1)
-        {
-            <div class="noidung">
-                @Html.Raw(Model.NoiDungChu)
-            </div>
-            <div class="btn-chuong">
-                <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {idTruyen = Model.id_Truyen , soChuong = Model.SoChuong + 1})" class="btn-next-chuong" rel="nofollow">Chương tiếp</a>
-            </div>
-        }
-        else if (Model.SoChuong == ChuongCuoi)
-        {
-            <div class="noidung">
-                @Html.Raw(Model.NoiDungChu)
-            </div>
-            <div class="btn-chuong">
-                <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {idTruyen = Model.id_Truyen , soChuong = Model.SoChuong - 1})" class="btn-next-chuong" rel="nofollow">Chương trước</a>
-            </div>
-        }
-        else
-        {
-            <div class="noidung">
-                @Html.Raw(Model.NoiDungChu)
-            </div>
-            <div class="btn-chuong">
-                <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {idTruyen = Model.id_Truyen , soChuong = Model.SoChuong - 1})" class="btn-next-chuong" rel="nofollow">Chương trước</a>
-                <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {idTruyen = Model.id_Truyen , soChuong = Model.SoChuong + 1})" class="btn-next-chuong" rel="nofollow">Chương tiếp</a>
-            </div>
-        }
-    </div>
+    @if (Session[FS_Project.Common.Constants.USER_SESSION] == null)
+    {
+        <script>
+            window.alert("Bạn cần đăng nhập để sử dụng chức năng này");
+        </script>
+    }
+    else
+    {
+        <div class="doctruyen">
+            <h2>@Truyen.tentruyen</h2>
+            <h3>@Model.TenChuong</h3>
+            @if (Model.SoChuong == 1)
+            {
+                <div class="noidung">
+                    @Html.Raw(Model.NoiDungChu)
+                </div>
+                <div class="btn-chuong">
+                    <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {idTruyen = Model.id_Truyen , soChuong = Model.SoChuong + 1})" class="btn-next-chuong" rel="nofollow">Chương tiếp</a>
+                </div>
+            }
+            else if (Model.SoChuong == ChuongCuoi)
+            {
+                <div class="noidung">
+                    @Html.Raw(Model.NoiDungChu)
+                </div>
+                <div class="btn-chuong">
+                    <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {idTruyen = Model.id_Truyen , soChuong = Model.SoChuong - 1})" class="btn-next-chuong" rel="nofollow">Chương trước</a>
+                </div>
+            }
+            else
+            {
+                <div class="noidung">
+                    @Html.Raw(Model.NoiDungChu)
+                </div>
+                <div class="btn-chuong">
+                    <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {idTruyen = Model.id_Truyen , soChuong = Model.SoChuong - 1})" class="btn-next-chuong" rel="nofollow">Chương trước</a>
+                    <a href="@Url.Action("DocTruyen","ChiTietTruyen", new {idTruyen = Model.id_Truyen , soChuong = Model.SoChuong + 1})" class="btn-next-chuong" rel="nofollow">Chương tiếp</a>
+                </div>
+            }
+        </div>
+    }
+
 </div>
 

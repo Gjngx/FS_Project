@@ -18,7 +18,7 @@ namespace FS_Project.Areas.admin
             context.MapRoute(
                 "admin_default",
                 "admin/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }
+                new { controller = "AdminTrangChu", action = "Index", id = UrlParameter.Optional }
 
             );
         }
