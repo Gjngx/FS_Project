@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace FS_Project.Areas.admin.Controllers
 {
-    public class AdminTrangChuController : Controller
+    public class AdminTrangChuController : BaseController
     {
         // GET: admin/AdminTrangChu
         public ActionResult Index()

@@ -1,4 +1,5 @@
 ﻿using FS_Project.Common;
+using FS_Project.Context;
 using FS_Project.DAO;
 using System;
 using System.Collections.Generic;
@@ -16,35 +17,32 @@ namespace FS_Project.Controllers
             var model = new UserDAO().ViewDetail(id);
             return View(model);
         }
-
-        //HttpGet
-        public ActionResult Change_Password(int id)
+        [HttpGet]
+        public ActionResult Edit(int id)
         {
-            var model = new UserDAO().ViewDetail(id);
-            return View(model);
+            var user = new UserDAO().ViewDetail(id);
+            return View(user);
         }
+
         [HttpPost]
-        public ActionResult Change_Password(string UserName, string PassOld, string PassNew)
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit(User user)
         {
             if (ModelState.IsValid)
             {
-                var encryptedoldpass = Encrypt_MD5.GetMD5(PassOld);
-                var encryptednewPas = Encrypt_MD5.GetMD5(PassNew);
-                PassOld = encryptedoldpass;
-                PassNew = encryptednewPas;
-                var check = new UserDAO();
-                var result = check.Update(UserName, PassOld, PassNew);
-                if (result == true)
+                var result = new UserDAO().Update(user);
+
+                if (result)
                 {
-                    ModelState.AddModelError("", "Đổi mật khẩu thành công.");
-                    return View("Change_Password");
+
+                    return RedirectToAction("Index", "ManageAccount");
                 }
                 else
                 {
                     ModelState.AddModelError("", "Cập nhật user không thành công");
                 }
             }
-            return View("Change_Password");
+            return View("Index");
         }
     }
 }

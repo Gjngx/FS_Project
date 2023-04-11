@@ -7,7 +7,7 @@ using System.Web.Mvc;
 
 namespace FS_Project.Areas.admin.Controllers
 {
-    public class FileUploadController : Controller
+    public class FileUploadController : BaseController
     {
         // GET: admin/FileUpload
         public ActionResult Index()

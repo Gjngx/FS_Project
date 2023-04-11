@@ -1,0 +1,37 @@
+﻿@using FS_Project.ViewModel
+@model LoginViewModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAccount.cshtml";
+}
+
+<body>
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/TrangChu/Index">Trang Chủ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Đăng Nhập</li>
+        </ol>
+    </nav>
+    <div class="wrapper">
+        <div class="container">
+            <div class="row justify-content-around dislay_login">
+                <form action="/Login/Login" class="col-md-6" , method="post">
+                    <a href="/TrangChu/Index"><img src="~/images/logo.png" class="rounded mx-auto d-block" alt="Login"></a>
+                    <div class="form-group">
+                        @Html.ValidationSummary(false, "", new { @class = "text-danger" })
+                        <label for="exampleUserName">Tên tài khoản</label>
+                        @Html.TextBoxFor(model => model.UserName, new { @class = "form-control input-form", @id = "exampleUserName", @placeholder = "Nhập tên đăng nhập" })
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Mật khẩu</label>
+                        @Html.PasswordFor(model => model.PassWords, new { @class = "form-control", @id = "exampleInputPassword1", @placeholder = "Nhập mật khẩu" })
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Đăng Nhập</button>
+                    <p class="mt-2" style="text-align: center;">Bạn chưa có tài khoản - <a href="/Account/Register">Tạo tài khoản</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+

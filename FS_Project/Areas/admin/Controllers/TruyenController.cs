@@ -9,7 +9,7 @@ using System.Web.Mvc;
 
 namespace FS_Project.Areas.admin.Controllers
 {
-    public class TruyenController : Controller
+    public class TruyenController : BaseController
     {
         // GET: admin/Truyen
         DbModel db = new DbModel();
