@@ -14995,4 +14995,27 @@ end
 go
 --exec InsertTheLoai N'Cổ Đại',N'co-dai'
 --exec InsertChuong 1, N'Chương 6', 'chuong-6', 6, N'Giang'
+create proc GetAdmin
+as
+select * from dbo.Admins
+go
 
+create proc InsertTacGia
+	@TenTacGia nvarchar(255),
+	@TieuDe varchar(150)
+as
+begin
+	insert into TacGia(TenTacGia,TieuDe)
+	values(@TenTacGia,@TieuDe)
+end
+go
+
+create proc InsertAdmin
+	@UserName varchar(50),
+	@PassWord varchar(50),
+	@TrangThai bit
+as
+begin
+	insert into Admins(UserName,PassWords,TrangThai)
+	values(@UserName,@PassWord,@TrangThai)
+end

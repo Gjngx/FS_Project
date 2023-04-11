@@ -37,6 +37,14 @@
                         <img src="~/images/user.png">
                     </a>
                 </div>
+                <div class="menu">
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="@Url.Action("Index","TrangChu")">Trang chủ</a>
+                        <a href="#">Tài khoản</a>
+                    </div>
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                </div>
             }
             else
             {
@@ -46,16 +54,16 @@
                     <a href="@Url.Action("Logout","Account")"><img style="width:15px;padding-top:5px" src="~/images/logout.png" alt="Logout" /></a>
 
                 </div>
-            }
-            <div class="menu">
-                <div id="mySidenav" class="sidenav">
-                    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                    <a href="@Url.Action("Index","TrangChu")">Trang chủ</a>
-                    <a href="#">Theo dõi</a>
-                    <a href="#">Tài khoản</a>
+                <div class="menu">
+                    <div id="mySidenav" class="sidenav">
+                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                        <a href="@Url.Action("Index","TrangChu")">Trang chủ</a>
+                        <a href="/ManageAccount/Index/@session.ID">Tài khoản</a>
+                    </div>
+                    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
                 </div>
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-            </div>
+            }
+
         </nav>
     </div>
 </header>
